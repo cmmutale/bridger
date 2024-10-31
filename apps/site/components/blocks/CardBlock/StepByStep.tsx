@@ -1,8 +1,7 @@
-import React from 'react'
-import { CardBlock, CardCopyText, CardList } from '.'
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
+import { CardBlock, CardCopyText, CardList } from '.'
 
 export default function StepByStep() {
     return (

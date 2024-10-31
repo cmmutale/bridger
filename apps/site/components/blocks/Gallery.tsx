@@ -1,16 +1,15 @@
 "use client"
 
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { AspectRatio } from '../ui/aspect-ratio'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { AspectRatio } from '../ui/aspect-ratio';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
+import { Pagination } from 'swiper/modules';
 
 const data = [
     {

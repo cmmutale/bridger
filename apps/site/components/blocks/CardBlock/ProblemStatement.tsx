@@ -1,9 +1,8 @@
-import React from 'react'
-import { Card, CardContent, CardFooter } from '../../ui/card'
-import { CardBlock, CardCopyText, CardList } from '.'
 import { LucideX } from 'lucide-react'
-import { Button } from '../../ui/button'
 import Link from 'next/link'
+import { CardBlock, CardCopyText, CardList } from '.'
+import { Button } from '../../ui/button'
+import { Card, CardContent, CardFooter } from '../../ui/card'
 
 export default function ProblemStatement() {
     return (
@@ -21,8 +20,9 @@ export default function ProblemStatement() {
                         <CardContent className='p-2 space-y-4'>
                             <div className='flex flex-nowrap gap-2'>
                                 <LucideX className='text-destructive shrink-0' />
-                                <p>Many struggle to pick the right tools and platforms to match
-                                    their website's purpose.
+                                <p>
+                                    {`Many struggle to pick the right tools and platforms to match
+                                    their website's purpose.`}
                                 </p>
                             </div>
                             <div className='flex flex-nowrap gap-2'>

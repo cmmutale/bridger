@@ -1,9 +1,8 @@
-import React from 'react'
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '../ui/navigation-menu'
-import { InformationBlock, InformationCopyHeading, InformationCopyBody, InformationActions } from './InformationBlock'
 import { Button } from '@/components/ui/button'
-import Logo from '../ui/logo'
 import Link from 'next/link'
+import Logo from '../ui/logo'
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '../ui/navigation-menu'
+import { InformationActions, InformationBlock, InformationCopyBody, InformationCopyHeading } from './InformationBlock'
 
 
 export default function Footer() {

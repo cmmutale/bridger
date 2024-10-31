@@ -1,8 +1,7 @@
-import React from 'react'
-import { Button } from '../ui/button'
-import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardTitle } from '../ui/card'
 import { LucideGlobe, LucidePaintRoller, LucideServer } from 'lucide-react'
+import Link from 'next/link'
+import { Button } from '../ui/button'
+import { Card, CardContent, CardDescription, CardTitle } from '../ui/card'
 
 export default function Masthead() {
     return (
@@ -42,7 +41,7 @@ export default function Masthead() {
                                     <span className='capitalize'>Maintenance & hosting</span>
                                 </CardTitle>
                                 <CardDescription>
-                                    We host your website making sure it's secure and always running.
+                                    {`We host your website making sure it's secure and always running.`}
                                 </CardDescription>
                             </div>
                         </CardContent>

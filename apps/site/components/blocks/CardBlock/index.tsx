@@ -1,6 +1,6 @@
-import React from 'react';
-import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+import React from 'react';
 
 const cardBlockVariants = cva(
     "inner container max-w-screen-lg mx-auto px-4 sm:px-2 flex flex-col gap-4",
@@ -42,7 +42,7 @@ const CardCopyText = React.forwardRef<HTMLDivElement,
         <div
             ref={ref}
             {...props}
-            className={`flex-1 space-y-4`} />
+            className={`flex-1 space-y-4 ${className}`} />
     ));
 CardCopyText.displayName = "CardCopyText"
 
@@ -51,8 +51,8 @@ const CardList = React.forwardRef<HTMLDivElement,
         <div
             ref={ref}
             {...props}
-            className={`flex-1 space-y-4`} />
+            className={`flex-1 space-y-4 ${className}`} />
     ))
 CardList.displayName = "CardList"
 
-export { CardBlock, CardCopyText, CardList }
+export { CardBlock, CardCopyText, CardList };

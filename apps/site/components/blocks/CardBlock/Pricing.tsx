@@ -1,6 +1,5 @@
-import React from 'react'
+import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { CardBlock, CardCopyText, CardList } from '.'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function Pricing() {
     return (
