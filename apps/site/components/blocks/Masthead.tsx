@@ -16,7 +16,7 @@ export default function Masthead() {
                     </Link>
 
                     <Card className='max-w-screen-lg shadow-lg'>
-                        <CardContent className='p-4 flex flex-col sm:flex-row gap-8'>
+                        <CardContent className='p-6 flex flex-col sm:flex-row gap-8'>
                             <div className='space-y-4'>
                                 <CardTitle className='flex items-center gap-2'>
                                     <LucideGlobe />

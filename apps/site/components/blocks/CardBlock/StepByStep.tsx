@@ -46,7 +46,7 @@ export default function StepByStep() {
                         </Card>
                     </div>
                     <Link href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank' className='w-auto text-center block'>
-                        <Button className='mt-4' variant={`default`} size={`lg`}>Get Started</Button>
+                        <Button className='mt-4 uppercase' variant={`default`} size={`lg`}>Get Started</Button>
                     </Link>
                 </CardList>
             </CardBlock>

@@ -17,7 +17,7 @@ export default function ProblemStatement() {
                 </CardCopyText>
                 <CardList>
                     <Card className='shadow-xl'>
-                        <CardContent className='p-2 space-y-4'>
+                        <CardContent className='p-6 space-y-4'>
                             <div className='flex flex-nowrap gap-2'>
                                 <LucideX className='text-destructive shrink-0' />
                                 <p>

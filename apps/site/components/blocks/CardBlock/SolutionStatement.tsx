@@ -19,7 +19,7 @@ export default function SolutionStatement() {
                 </CardCopyText>
                 <CardList>
                     <Card className='shadow-xl'>
-                        <CardContent className='p-2 space-y-4'>
+                        <CardContent className='p-6 space-y-4'>
                             <div className='flex flex-nowrap gap-2'>
                                 <LucideCheckCircle className='text-green-500 shrink-0' />
                                 <p>Get your website live on time and on budget, every time.
@@ -42,7 +42,7 @@ export default function SolutionStatement() {
                         </CardContent>
                         <CardFooter>
                             <Link className='block w-full' href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank'>
-                                <Button size={`lg`} className='w-full'>Get all that today!</Button>
+                                <Button size={`lg`} className='w-full uppercase'>Get all that today!</Button>
                             </Link>
                         </CardFooter>
                     </Card>
