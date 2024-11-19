@@ -1,4 +1,3 @@
-import { CardBlock, CardCopyText, CardList } from '.'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -9,15 +8,15 @@ const data = {
     team: [
         {
             name: "John Doe",
-            role: "CEO",
+            role: "Web Developer",
             image: "/media/images/chilufya-headshot.jpeg"
         }, {
             name: "Jane Smith",
-            role: "CTO",
+            role: "IT Solutions",
             image: "/media/images/tatenda-headshot.jpeg"
         }, {
             name: "Bob Johnson",
-            role: "CFO",
+            role: "Solutions Architect",
             image: "/media/images/taf-headshot.jpeg"
         }
     ]
@@ -25,41 +24,41 @@ const data = {
 
 export default function MeetTheTeam() {
     return (
-        <section className='min-h-[800px] flex items-center justify-center sm:py-4 py-24'>
-            <CardBlock variant="rightToLeft">
-                <CardCopyText>
-                    <h1 className='capitalize font-bold font-body text-center 
-                    sm:text-left text-3xl lg:text-4xl'>
-                        We fix all of that with our years of
-                        <span className='font-heading'> experience and energetic </span>team.
-                    </h1>
-                    <p>
-                        At Nodedrop, we specialize in delivering web development services that
-                        help local businesses thrive. From design to deployment, we focus on
-                        simplicity and results.
-                    </p>
-                    <Link href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank' className='block'>
-                        <Button size={`lg`} className='w-full uppercase'>
-                            Get in touch with us today!</Button>
-                    </Link>
-                </CardCopyText>
-                <CardList>
-                    <div className='grid grid-cols-3 sm:grid-cols-3 gap-4 justify-center'>
+        <section className='section'>
+            <div className="section__wraper container mx-auto px-4 sm:px-6 py-24">
+                <div className="section__content space-y-4">
+                    <div className="section__copy max-w-2xl mx-auto text-center space-y-4">
+                        <h2 className='font-bold text-3xl sm:text-4xl'>Backed by an energetic team filled with talent.</h2>
+                        <p className='clip-text mx-auto'>
+                            At Nodedrop, we specialize in delivering web development services that
+                            help local businesses thrive. From design to deployment, we focus on
+                            simplicity and results.
+                        </p>
+                        <Link href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank' className='block'>
+                            <Button size={`lg`} className='rounded-full hover:px-12 duration-300 
+                                    hover:tracking-widest transition-all'>
+                                Get in touch with us today!</Button>
+                        </Link>
+                    </div>
+                    <div className='grid grid-cols-3 sm:grid-cols-3 gap-12 justify-center'>
                         {
                             data.team.map((_, i) => (
-                                <AspectRatio ratio={1} className='relative' key={i}>
-                                    <Image
-                                        src={_.image}
-                                        alt={_.name}
-                                        fill={true}
-                                        className='object-cover'
-                                    />
-                                </AspectRatio>
+                                <div key={i} className='space-y-4'>
+                                    <AspectRatio ratio={1} className='relative'>
+                                        <Image
+                                            src={_.image}
+                                            alt={_.name}
+                                            fill={true}
+                                            className='object-cover'
+                                        />
+                                    </AspectRatio>
+                                    <p className='text-center font-bold'>{_.role}</p>
+                                </div>
                             ))
                         }
                     </div>
-                </CardList>
-            </CardBlock>
+                </div>
+            </div>
         </section>
     )
 }

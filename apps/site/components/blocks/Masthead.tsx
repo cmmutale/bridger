@@ -5,49 +5,38 @@ import { Card, CardContent, CardDescription, CardTitle } from '../ui/card'
 
 export default function Masthead() {
     return (
-        <section className='min-h-[600px] flex items-center justify-center'>
-            <div className="inner container mx-auto px-4 sm:px-0">
-                <div className="copy flex flex-col space-y-8 items-center">
-                    <h1 className='capitalize font-bold font-body text-center text-4xl lg:text-6xl'>
-                        Building websites that <br /> work <span className='font-heading'>for you</span>.</h1>
-
-                    <Link href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank' className='block'>
-                        <Button className="uppercase" size={`lg`}>Book a call now</Button>
-                    </Link>
-
-                    <Card className='max-w-screen-lg shadow-lg'>
-                        <CardContent className='p-6 flex flex-col sm:flex-row gap-8'>
-                            <div className='space-y-4'>
-                                <CardTitle className='flex items-center gap-2'>
-                                    <LucideGlobe />
-                                    <span className='capitalize'>Web development</span>
-                                </CardTitle>
-                                <CardDescription>
-                                    We design and develop your website from ground up building fast and secure.
-                                </CardDescription>
-                            </div>
-                            <div className='space-y-4'>
-                                <CardTitle className='flex items-center gap-2'>
-                                    <LucidePaintRoller />
-                                    <span className='capitalize'>Branding & marketing</span>
-                                </CardTitle>
-                                <CardDescription>
-                                    Designing websites and giving you the right words to tell your story.
-                                </CardDescription>
-                            </div>
-                            <div className='space-y-4'>
-                                <CardTitle className='flex items-center gap-2'>
-                                    <LucideServer />
-                                    <span className='capitalize'>Maintenance & hosting</span>
-                                </CardTitle>
-                                <CardDescription>
-                                    {`We host your website making sure it's secure and always running.`}
-                                </CardDescription>
-                            </div>
-                        </CardContent>
-                    </Card>
+        <div className="section section--masthead branding-primary">
+            <div className="section__wrapper container mx-auto px-4 py-24">
+                <div className="section__content space-y-4">
+                    <div className="section__copy text-center max-w-3xl mx-auto space-y-4">
+                        <h1 className='text-4xl sm:text-5xl font-bold'>
+                            Building websites that work for you.
+                        </h1>
+                        <p className='text-base'>
+                            Reach the audience you want where they are.
+                        </p>
+                    </div>
+                    <div className="section__cta">
+                        <div className="button--row flex flex-wrap justify-center gap-4">
+                            <Link href={`#`}>
+                                <Button
+                                    size={`lg`}
+                                    className='rounded-full bg-black hover:bg-black/80 
+                                    hover:px-12 hover:tracking-widest duration-300 transition-all
+                                    active:px-6'>Reserve a meeting</Button>
+                            </Link>
+                            <Link href={`#`}>
+                                <Button
+                                    variant={`outline`}
+                                    size={`lg`}
+                                    className='rounded-full hover:px-12 duration-300 
+                                    hover:tracking-widest transition-all
+                                    active:px-6'>See our work</Button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }

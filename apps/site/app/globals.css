@@ -10,12 +10,12 @@
   }
 
   body {
-    @apply font-body text-foreground;
+    @apply font-body text-foreground bg-background;
   }
 
   p,
   li {
-    @apply text-pretty max-w-[65ch] leading-relaxed;
+    @apply text-pretty leading-relaxed;
   }
 
   h1,
@@ -23,15 +23,10 @@
   h3 {
     @apply text-balance leading-none;
   }
-}
 
-@layer utilities {
-  .font-heading {
-    @apply text-primary;
+  .clip-text {
+    @apply max-w-[65ch];
   }
 }
 
-body {
-  background-color: #f1eaff;
-  background-image: radial-gradient(at 64% 27%, #f1eaff 0%, transparent 60%), radial-gradient(at 15% 90%, #e5d4ff 0%, transparent 50%), radial-gradient(at 76% 24%, #dcbfff 0%, transparent 40%), radial-gradient(at 78% 88%, #d0a2f7 0%, transparent 30%);
-}
+@layer utilities {}

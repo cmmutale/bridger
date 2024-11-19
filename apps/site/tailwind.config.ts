@@ -1,3 +1,4 @@
+import { AlertTriangle } from "lucide-react";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -11,7 +12,8 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				body: "var(--font-body)",
-				heading: "var(--font-heading)"
+				heading: "var(--font-heading)",
+				alt: "var(--font-alt)",	
 			},
 			colors: {
 				background: 'hsl(var(--background))',

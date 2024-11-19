@@ -2,6 +2,8 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { AspectRatio } from '../ui/aspect-ratio';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -45,53 +47,52 @@ const data = [
 
 export default function Gallery() {
     return (
-        <section className='min-h-[600px] flex items-center justify-center py-24'>
-            <div className="inner container mx-auto px-4 sm:px-0 space-y-8">
-                <h1 className='capitalize font-bold font-body text-center text-4xl lg:text-5xl'>
-                    Design <span className='font-heading'> & </span> Development</h1>
-
-                <div className='space-y-8'>
-                    {
-                        data.map((_, i) => (
-                            <div className='space-y-4 max-w-full' key={i}>
-                                <h3 className='font-bold font-heading text-xl'>{_.title}</h3>
-                                <Swiper
-                                    slidesPerView={1}
-                                    spaceBetween={10}
-                                    pagination={{
-                                        clickable: true,
-                                    }}
-                                    breakpoints={{
-                                        640: {
-                                            slidesPerView: 2,
-                                            spaceBetween: 20,
-                                        },
-                                        768: {
-                                            slidesPerView: 3,
-                                            spaceBetween: 40,
-                                        },
-                                    }}
-                                    modules={[Pagination]}
-                                    className='swiper'>
-                                    {
-                                        _.items.map((_, i) => (
-                                            <SwiperSlide key={i}>
-                                                <AspectRatio className='relative' ratio={10 / 9}>
-                                                    <div className="sheeth absolute top-0 left-0 h-full w-full"></div>
-                                                    <Image
-                                                        fill={true}
-                                                        src={_.image}
-                                                        alt={_.alt}
-                                                        className='object-cover object-top hover:cursor-grab active:cursor-grabbing'
-                                                    />
-                                                </AspectRatio>
-                                            </SwiperSlide>
-                                        ))
-                                    }
-                                </Swiper>
+        <section className='section  branding-primary'>
+            <div className="section__wrapper container mx-auto px-4 sm:px-6 py-24">
+                <div className="section__content space-y-4">
+                    <div className='space-y-4'>
+                        <div className="section__copy">
+                            {/* <p className='text-sm font-bold'>Design and Development</p> */}
+                            <h1 className='capitalize font-bold text-3xl lg:text-4xl'>
+                                Our work
+                            </h1>
+                        </div>
+                        <div className="section__cta">
+                            <div className="button--row flex flex-wrap gap-4">
+                                <Link href={`#`}>
+                                    <Button
+                                        size={`lg`}
+                                        variant={`outline`}
+                                        className='rounded-full hover:px-12 hover:tracking-widest 
+                                    duration-300 transition-all hover:font-black
+                                    active:px-6'>See the full catalogue</Button>
+                                </Link>
                             </div>
-                        ))
-                    }
+                        </div>
+                    </div>
+
+                    <div className=''>
+                        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-12'>
+                            {
+                                data[0].items.map((_, i) => (
+                                    <div key={i}>
+                                        <div className=''>
+                                        <AspectRatio className='relative'>
+                                            <div className="sheeth absolute top-0 left-0 h-full w-full"></div>
+                                            <Image
+                                                fill={true}
+                                                src={_.image}
+                                                alt={_.alt}
+                                                className='object-cover object-top hover:cursor-grab active:cursor-grabbing'
+                                            />
+                                        </AspectRatio>
+                                        </div>
+                                        <p className='font-bold text-center pt-8'>Project {i}</p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

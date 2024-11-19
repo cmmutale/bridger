@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { PraiseFont, OutfitFont } from "./fonts";
+import { fontAlt, fontBody, fontHeading } from "./fonts";
 
 import "./globals.css";
 
@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${PraiseFont.variable} ${OutfitFont.variable} antialiased`}>
+        className={`${fontAlt.variable} 
+        ${fontBody.variable} 
+        ${fontHeading.variable} antialiased`}>
         {children}
       </body>
     </html>

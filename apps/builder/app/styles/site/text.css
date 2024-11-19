@@ -1,0 +1,44 @@
+p,
+li {
+    max-width: 65ch;
+}
+
+.text--sm {
+    font-size: 0.825rem;
+}
+
+.text--lg {
+    font-size: 1.125rem;
+}
+
+.text--xl {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.text-heading {
+    text-wrap: balance;
+}
+
+.text-p {
+    text-wrap: pretty;
+}
+
+.text--h-1 {
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.text--h-2 {
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.text--h-3 {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 900;
+}

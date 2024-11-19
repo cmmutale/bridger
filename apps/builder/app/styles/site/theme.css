@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius-1: 8px;
+        --radius-2: unset;
+        --radius-3: 0.75rem;
+        --radius-4: 2rem;
+        --radius-5: unset;
+        --radius-6: unset;
+        --gap-xs: var(--size-2);
+        --gap-s: var(--size-fluid-2);
+        --gap-m: var(--size-fluid-5);
+        --gap-l: var(--size-fluid-7);
+        --shadow-3d: 0 5px 0 0 var(--foreground-primary);
+        --duration-default: 150ms;
+        --easing-default: var(--ease-out-3);
+        --spacing-default: var(--size-fluid-4);
+        --focus-width: var(--border-size-3);
+        --focus-color: var(--foreground-accent);
+        --foreground-primary: #edede8;
+        --foreground-secondary: #edede8;
+        --foreground-accent: #edede8;
+        --foreground-muted: #edede893;
+        --foreground-border: #edede893;
+        /* --foreground-invert: var(--background-primary); */
+        --background-primary: #1e1e1e;
+        --background-secondary: #1e1e1e;
+        --background-accent: #1e1e1e;
+        --background-card: #f7f7f7;
+        --background-tertiary: #f7f7f7;
+    }
+
+    .dark {
+        --radius-1: 8px;
+        --radius-2: unset;
+        --radius-3: 0.75rem;
+        --radius-4: 2rem;
+        --radius-5: unset;
+        --radius-6: unset;
+        --gap-xs: var(--size-2);
+        --gap-s: var(--size-fluid-2);
+        --gap-m: var(--size-fluid-5);
+        --gap-l: var(--size-fluid-7);
+        --shadow-3d: 0 5px 0 0 var(--foreground-primary);
+        --duration-default: 150ms;
+        --easing-default: var(--ease-out-3);
+        --spacing-default: var(--size-fluid-4);
+        --focus-width: var(--border-size-3);
+        --focus-color: var(--foreground-accent);
+        --foreground-primary: var(--gray-12);
+        --foreground-secondary: var(--blue-11);
+        --foreground-accent: var(--green-6);
+        --foreground-muted: var(--gray-8);
+        --foreground-border: var(--blue-11);
+        --foreground-invert: var(--background-primary);
+        --background-primary: var(--gray-0);
+        --background-secondary: var(--gray-1);
+        --background-accent: var(--gray-12);
+        --background-card: var(--gray-1);
+        --background-tertiary: var(--foreground-accent);
+    }
+}

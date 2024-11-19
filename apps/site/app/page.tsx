@@ -1,6 +1,7 @@
 import MeetTheTeam from '@/components/blocks/CardBlock/MeetTheTeam'
 import Pricing from '@/components/blocks/CardBlock/Pricing'
 import ProblemStatement from '@/components/blocks/CardBlock/ProblemStatement'
+import Services from '@/components/blocks/CardBlock/Services'
 import SolutionStatement from '@/components/blocks/CardBlock/SolutionStatement'
 import StepByStep from '@/components/blocks/CardBlock/StepByStep'
 import Footer from '@/components/blocks/Footer'
@@ -13,10 +14,10 @@ export default function page() {
     <div>
       <Header />
       <Masthead />
+      <Services />
       <Gallery />
       <ProblemStatement />
       <MeetTheTeam />
-      <SolutionStatement />
       <StepByStep />
       <Pricing />
       {/* <CallToAction /> */}
