@@ -1,6 +1,5 @@
 "use client"
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { AspectRatio } from '../ui/aspect-ratio';
 import Link from 'next/link';
 import { Button } from '../ui/button';
@@ -11,7 +10,6 @@ import 'swiper/css/pagination';
 
 // import required modules
 import Image from 'next/image';
-import { Pagination } from 'swiper/modules';
 
 const data = [
     {

@@ -1,7 +1,5 @@
-import { LucideGlobe, LucidePaintRoller, LucideServer } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
-import { Card, CardContent, CardDescription, CardTitle } from '../ui/card'
 
 export default function Masthead() {
     return (

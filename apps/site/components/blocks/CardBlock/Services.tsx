@@ -59,7 +59,7 @@ export default function Services() {
                                 </CardHeader>
                                 <CardContent>
                                     <p className='font-semibold clip-text'>
-                                        We host your website making sure it's secure and always running.
+                                        {`We host your website making sure it's secure and always running.`}
                                     </p>
                                 </CardContent>
                             </Card>

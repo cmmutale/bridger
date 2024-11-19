@@ -17,11 +17,17 @@ import { Metadata } from "next";
 import { getPage } from "../../../lib/get-page";
 
 export async function generateMetadata({
-    params: { puckPath = [] },
+    params,
 }: {
-    params: { puckPath: string[] };
+    params: Promise<{ puckPath: string[] }>;
 }): Promise<Metadata> {
-    const path = `/${puckPath.join("/")}`;
+    const puckPath = (await params).puckPath;
+    if (!puckPath)
+        return {
+            title: "Puck: /",
+        };
+
+    const path = `/${puckPath.join("/")}` || '';
 
     return {
         title: "Puck: " + path,
@@ -29,11 +35,12 @@ export async function generateMetadata({
 }
 
 export default async function Page({
-    params: { puckPath = [] },
+    params,
 }: {
-    params: { puckPath: string[] };
+    params: Promise<{ puckPath: string[] }>;
 }) {
-    const path = `/${puckPath.join("/")}`;
+    const puckPath = (await params).puckPath;
+    const path = `/${puckPath.join("/")}` || '';
     const data = getPage(path);
 
     return <Client path={path} data={data || {}} />;

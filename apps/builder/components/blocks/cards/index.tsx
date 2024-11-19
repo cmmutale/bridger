@@ -1,5 +1,5 @@
 import { ComponentConfig } from "@measured/puck";
-import createFieldContentful from "@measured/puck-field-contentful";
+// import createFieldContentful from "@measured/puck-field-contentful";
 import ActionRow from "../ui/action-row";
 import Swiperjs from "@/components/ui/swiperjs";
 
@@ -41,9 +41,9 @@ export interface CardBlockProps {
 
 export const CardsBlock: ComponentConfig<any> = {
     label: "Card Block",
-    render: ({ copy, layout, action, cards, cardsPerView, data }) => (
+    render: ({ copy, layout, action, cards }) => (
         <section
-            className="container">
+            className={`container ${layout.width}`}>
             <div className="inner space-y-4">
                 <div>
                     <h2 className={`${copy.headlineSize}`}>{copy.headline}</h2>

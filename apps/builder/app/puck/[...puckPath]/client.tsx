@@ -5,7 +5,7 @@ import { Puck } from "@measured/puck";
 import config from "../../../puck.config";
 import { useToast } from "@/hooks/use-toast"
 import { ToastAction } from "@/components/ui/toast";
-import Link from "next/link";
+// import Link from "next/link";
 import { Button } from "@measured/puck";
 import { useDemoData } from "@/lib/usePuckData";
 

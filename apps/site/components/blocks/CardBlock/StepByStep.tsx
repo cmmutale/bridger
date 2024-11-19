@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
-import { CardBlock, CardCopyText, CardList } from '.'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image from 'next/image'
 

@@ -1,10 +1,5 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
-import Logo from '../ui/logo'
-import {
-    NavigationMenu,
-    NavigationMenuList
-} from '../ui/navigation-menu'
 
 export default function Header() {
     return (

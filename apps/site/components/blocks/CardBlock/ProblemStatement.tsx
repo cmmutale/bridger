@@ -1,6 +1,5 @@
 import { LucideX } from 'lucide-react'
 import Link from 'next/link'
-import { CardBlock, CardCopyText, CardList } from '.'
 import { Button } from '../../ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../ui/card'
 import { LucideCheckCircle } from 'lucide-react'

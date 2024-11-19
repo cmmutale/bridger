@@ -7,7 +7,7 @@ export interface GalleryBlockProps {
     copy?: {
         headline: string;
         headlineSize: string;
-        body: any;
+        body: string;
         bodySize: string
         anchor: string;
     },
@@ -41,7 +41,7 @@ export interface GalleryBlockProps {
 
 export const GalleryBlock: ComponentConfig<any> = {
     label: "Gallery Block",
-    render: ({ copy, layout, action, cards, cardsPerView, data }) => (
+    render: ({ copy, layout, action, cards }) => (
         <div className="box">
             <section className={`container ${layout.height}`}>
                 <div className="inner space-y-4">
