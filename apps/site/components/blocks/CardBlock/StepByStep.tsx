@@ -9,7 +9,7 @@ export default function StepByStep() {
         <section className='sectin branding-primary'>
             <div className="section__wrapper container mx-auto px-4 sm:px-6 py-24">
                 <div className="section__content">
-                    <div className="grid grid-cols-2 space-y-8 justify-between">
+                    <div className="grid sm:grid-cols-2 space-y-8 justify-between">
                         <div className="section__copy space-y-4 text-center col-span-2">
                             <h1 className='font-bold text-3xl sm:text-4xl capitalize'>
                                 How we work with you.
@@ -21,7 +21,7 @@ export default function StepByStep() {
                                     alt='Rocket launching from a laptop'
                                     fill
                                     className='object-cover'
-                                    src={`/media/images/freepik_launch.jpeg`} />
+                                    src={`/media/images/freepik__a.jpeg`} />
                             </AspectRatio>
                         </div>
                         <div className="card__list order-2">

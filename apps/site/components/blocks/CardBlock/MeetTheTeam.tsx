@@ -40,7 +40,7 @@ export default function MeetTheTeam() {
                                 Get in touch with us today!</Button>
                         </Link>
                     </div>
-                    <div className='grid grid-cols-3 sm:grid-cols-3 gap-12 justify-center'>
+                    <div className='grid sm:grid-cols-3 gap-12 justify-center'>
                         {
                             data.team.map((_, i) => (
                                 <div key={i} className='space-y-4'>

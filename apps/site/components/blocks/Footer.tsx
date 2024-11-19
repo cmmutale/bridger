@@ -7,55 +7,53 @@ import { InformationActions, InformationBlock, InformationCopyBody, InformationC
 
 export default function Footer() {
     return (
-        <footer className='py-24 bg-background'>
-            <div className="inner h-full container mx-auto max-w-screen-lg grid sm:grid-cols-3 items-start gap-4">
-                <InformationBlock variant={`default`}>
-                    <InformationCopyHeading>
-                        <div className="logo">
-                            <span className='font-black sr-only'>LOGO</span>
-                            <Logo link={true} />
-                        </div>
+        <footer className='section branding-primary'>
+            <div className="section__wrapper container mx-auto px-4 sm:px-6 py-24">
+                <div className="section__content text-center space-y-8">
+                    <div className="section__copy space-y-4">
+                        <h1 className='font-bold text-3xl sm:text-4xl'>
+                            Ready to make an impact?</h1>
 
-                        <h1 className='font-extrabold text-3xl sm:text-4xl'>
-                            Ready to make an
-                            <span className='font-heading'> impact?</span></h1>
-                    </InformationCopyHeading>
-                    <InformationCopyBody>
-                        <p></p>
-                        <InformationActions variant='default'>
-                            <Link className='block' href={process.env.NEXT_PUBLIC_CALENDAR_LINK!} target='_blank'>
-                                <Button size={`lg`} className='uppercase'>Get started today</Button>
+                        <div>
+                            <Link href={`#`}>
+                                <Button
+                                    size={`lg`}
+                                    className='rounded-full bg-black hover:bg-black/80 
+                                    hover:px-12 hover:tracking-widest duration-300 transition-all
+                                    active:px-6'>Reserve a meeting</Button>
                             </Link>
-                        </InformationActions>
-                    </InformationCopyBody>
-                </InformationBlock>
+                        </div>
+                    </div>
 
-                <div className='grid sm:grid-cols-2 items-start px-4 sm:px-2'>
-                    <NavigationMenu>
-                        <NavigationMenuList className='flex-col items-start space-x-0'>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink href='#'>Other Products</NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink href='#'>Blog</NavigationMenuLink>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
-                    <NavigationMenu>
-                        <NavigationMenuList className='flex-col items-start space-x-0'>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink href='mailto:admin@nodedropp.com'
-                                    className='underline text-accent-foreground'>admin@nodedropp.com</NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink href='#'>Terms & conditions</NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink href='#'>Privacy policy</NavigationMenuLink>
-                            </NavigationMenuItem>
-                        </NavigationMenuList>
-                    </NavigationMenu>
+                    <div className="">
+                        <div className='flex flex-col items-center'>
+                            <NavigationMenu className='text-center'>
+                                <NavigationMenuList className='gap-4 items-start space-x-0'>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink href='#'>Other Products</NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink href='#'>Blog</NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                </NavigationMenuList>
+                            </NavigationMenu>
+                            <NavigationMenu>
+                                <NavigationMenuList className='gap-4 items-start space-x-0'>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink href='mailto:admin@nodedropp.com'
+                                            className='underline text-accent-foreground'>admin@nodedropp.com</NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink href='#'>Terms & conditions</NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                    <NavigationMenuItem>
+                                        <NavigationMenuLink href='#'>Privacy policy</NavigationMenuLink>
+                                    </NavigationMenuItem>
+                                </NavigationMenuList>
+                            </NavigationMenu>
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
