@@ -9,5 +9,16 @@ export function Client({ path }: { path: string }) {
         path,
         isEdit: false
     });
-    return <Render config={config} data={pageData} />;
+
+    // console.log('PAGEPATH-------->', path);
+
+    if (!pageData) {
+        return <div>Loading...</div>;
+    }
+
+    return (
+        <>
+            <Render config={config} data={pageData} />
+        </>
+    );
 }

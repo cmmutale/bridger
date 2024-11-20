@@ -10,7 +10,7 @@ import { Button } from "@measured/puck";
 import { useDemoData } from "@/lib/usePuckData";
 
 
-export function Client({ path, data }: { path: string; data: Partial<Data> }) {
+export function Client({ path, data }: { path: string; data?: Partial<Data> }) {
     const { toast } = useToast();
     const { pageData, key } = useDemoData({
         path,
@@ -18,10 +18,8 @@ export function Client({ path, data }: { path: string; data: Partial<Data> }) {
     });
     const saveData = (data: Data) => {
         localStorage.setItem(key, JSON.stringify(data));
-        console.log("SAVED DATA--------------->", data)
+        // console.log("SAVED DATA--------------->", data)
     }
-
-    // console.log("DATA--------------->", value)
 
     return (
         <Puck

@@ -15,16 +15,18 @@ export const useDemoData = ({
     const key = `demo-data-${path}`;
 
     const [pageData] = useState<any>(() => {
-        if(isBrowser) {
+        if (isBrowser) {
             const dataStr = localStorage.getItem(key);
 
-            if(dataStr) {
+            if (dataStr) {
                 return JSON.parse(dataStr) as Data;
             }
 
             return {};
         }
     });
+
+    // console.log("USEPUCK---------->", pageData);
 
 
     return { pageData, key }
