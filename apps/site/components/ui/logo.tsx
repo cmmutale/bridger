@@ -7,11 +7,11 @@ interface LogoProps {
     height?: number;
 }
 
-export default function Logo({ width = 150, link, height = 100 }: LogoProps) {
+export default function Logo({ width = 150, link, height = 150 }: LogoProps) {
     return (
         <Link className='block' href={link ? "/" : "#"}>
             <Image
-                src={`/media/images/logo-dark.svg`}
+                src={`/media/svg/logo.svg`}
                 alt='image logo'
                 width={width}
                 height={height}

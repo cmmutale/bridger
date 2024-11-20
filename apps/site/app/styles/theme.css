@@ -10,7 +10,7 @@
         --card-foreground: 240 10% 3.9%;
         --popover: 0 0% 100%;
         --popover-foreground: 240 10% 3.9%;
-        --primary: 240 5.9% 10%;
+        --primary: 0 0% 0%;
         --primary-foreground: 0 0% 98%;
         --secondary: 240 4.8% 95.9%;
         --secondary-foreground: 240 5.9% 10%;
@@ -79,6 +79,9 @@
         /* Turquoise */
         --vibrant-text3: #2C2C2C;
         /* Deep grey */
+
+        --vibrant-bg4: #38619f;
+        --vibrant-text4: #ffffff;
     }
 
     .brand {
@@ -90,8 +93,8 @@
 
 
 .branding-primary {
-    background-color: var(--vibrant-bg2);
-    color: var(--vibrant-text2);
+    background-color: var(--vibrant-bg4);
+    color: var(--vibrant-text4);
 }
 
 .branding-secondary {

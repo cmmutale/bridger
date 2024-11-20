@@ -38,10 +38,10 @@ export default function Footer() {
                                 </NavigationMenuList>
                             </NavigationMenu>
                             <NavigationMenu>
-                                <NavigationMenuList className='gap-4 items-start space-x-0'>
+                                <NavigationMenuList className='gap-4 flex-wrap items-start space-x-0'>
                                     <NavigationMenuItem>
                                         <NavigationMenuLink href='mailto:admin@nodedropp.com'
-                                            className='underline text-accent-foreground'>admin@nodedropp.com</NavigationMenuLink>
+                                            className='underline'>admin@nodedropp.com</NavigationMenuLink>
                                     </NavigationMenuItem>
                                     <NavigationMenuItem>
                                         <NavigationMenuLink href='#'>Terms & conditions</NavigationMenuLink>

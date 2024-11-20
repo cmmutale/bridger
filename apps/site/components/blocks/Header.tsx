@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import Logo from '../ui/logo'
 
 export default function Header() {
     return (
@@ -7,7 +8,9 @@ export default function Header() {
             <div className="navigation__wrapper container mx-auto px-4  py-4 sm:py-8">
                 <div className="navigation__content flex flex-col sm:flex-row sm:gap-0 gap-8 items-center justify-between">
                     <div className='sm:block hidden'>
-                        <h1 className='font-black text-2xl leading-none'>Nodedrop <br />Design</h1>
+                        {/* <h1 className='font-black text-2xl leading-none'>Nodedrop <br />Design</h1> */}
+                        <span className='sr-only'>Nodedrop</span>
+                        <Logo />
                     </div>
                     <div className="navigation__menu grow sm:block hidden">
                         <nav className="navigation__content px-8 pl-12">

@@ -17,19 +17,23 @@ const data = [
         items: [
             {
                 image: "/media/images/demo-expert_hiring.png",
-                alt: "",
+                alt: "Hiring agency",
+                desc: "Business Agency"
             },
             {
                 image: "/media/images/demo-template-hawks.png",
                 alt: "",
+                desc: "Side Hustle"
             },
             {
                 image: "/media/images/demo-template-krypto.png",
                 alt: "",
+                desc: "Crypto Startup"
             },
             {
                 image: "/media/images/demo-template-onthegoglow.png",
                 alt: "",
+                desc: "Local Business"
             },
         ]
     },
@@ -85,7 +89,7 @@ export default function Gallery() {
                                             />
                                         </AspectRatio>
                                         </div>
-                                        <p className='font-bold text-center pt-8'>Project {i}</p>
+                                        <p className='font-bold text-center pt-8'>{_.desc}</p>
                                     </div>
                                 ))
                             }

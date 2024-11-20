@@ -8,7 +8,7 @@ import { LucideCheckCircle } from 'lucide-react'
 export default function ProblemStatement() {
     return (
         <section className='section py-24 branding-secondary'>
-            <div className="section__wrapper container mx-autp px-4 sm:px-6">
+            <div className="section__wrapper container mx-auto px-4 sm:px-6">
                 <div className="section__content">
                     <div className="section__copy">
                         <h2 className='font-bold text-3xl sm:text-4xl'>The benefits you get when you work with us.</h2>
