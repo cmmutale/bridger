@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Logo from '../ui/logo'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '../ui/navigation-menu'
 import { InformationActions, InformationBlock, InformationCopyBody, InformationCopyHeading } from './InformationBlock'
+import MeetingLink from '../ui/meeting-link'
 
 
 export default function Footer() {
@@ -15,13 +16,13 @@ export default function Footer() {
                             Ready to make an impact?</h1>
 
                         <div>
-                            <Link href={`#`}>
+                            <MeetingLink>
                                 <Button
                                     size={`lg`}
                                     className='rounded-full bg-black hover:bg-black/80 
                                     hover:px-12 hover:tracking-widest duration-300 transition-all
                                     active:px-6'>Reserve a meeting</Button>
-                            </Link>
+                            </MeetingLink>
                         </div>
                     </div>
 

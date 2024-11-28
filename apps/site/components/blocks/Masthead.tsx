@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import MeetingLink from '../ui/meeting-link'
 
 export default function Masthead() {
     return (
@@ -16,21 +17,19 @@ export default function Masthead() {
                     </div>
                     <div className="section__cta">
                         <div className="button--row flex flex-wrap justify-center gap-4">
-                            <Link href={`#`}>
+                            <MeetingLink>
                                 <Button
                                     size={`lg`}
                                     className='rounded-full bg-black hover:bg-black/80 
                                     hover:px-12 hover:tracking-widest duration-300 transition-all
                                     active:px-6'>Reserve a meeting</Button>
-                            </Link>
-                            <Link href={`#`}>
-                                <Button
-                                    variant={`outline`}
-                                    size={`lg`}
-                                    className='rounded-full hover:px-12 duration-300 
+                            </MeetingLink>
+                            {/* <Button
+                                variant={`outline`}
+                                size={`lg`}
+                                className='rounded-full hover:px-12 duration-300 
                                     hover:tracking-widest transition-all
-                                    active:px-6'>See our work</Button>
-                            </Link>
+                                    active:px-6'>See our work</Button> */}
                         </div>
                     </div>
                 </div>
