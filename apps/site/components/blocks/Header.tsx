@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import Logo from '../ui/logo'
+import MeetingLink from '../ui/meeting-link'
 
 export default function Header() {
     return (
@@ -35,14 +36,14 @@ export default function Header() {
                     </div>
                     <div className="navigation__cta">
                         <div className="button--row flex flex-wrap gap-4 justify-center">
-                            <Link href={`#`} className='w-full'>
+                            <MeetingLink>
                                 <Button
                                     size={`lg`}
                                     className='rounded-full bg-black hover:bg-black/80
                                     hover:px-12 hover:tracking-widest 
                                     duration-300 transition-all max-sm:w-full
                                     active:px-6'>Reserve your Jan spot!</Button>
-                            </Link>
+                            </MeetingLink>
                         </div>
                     </div>
                 </div>

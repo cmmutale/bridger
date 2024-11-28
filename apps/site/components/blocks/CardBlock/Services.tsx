@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { LucidePaintbrush, LucideSettings, LucideMonitor } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import MeetingLink from '@/components/ui/meeting-link'
 
 export default function Services() {
     return (
@@ -15,14 +16,14 @@ export default function Services() {
                     </div>
                     <div className="section__cta">
                         <div className="button--row flex flex-wrap gap-4 justify-center">
-                            <Link href={`#`}>
+                            <MeetingLink>
                                 <Button
                                     size={`lg`}
                                     variant={`outline`}
                                     className='rounded-full hover:px-12 hover:tracking-widest 
                                     duration-300 transition-all
-                                    active:px-6'>Learn more</Button>
-                            </Link>
+                                    active:px-6'>Get started today!</Button>
+                            </MeetingLink>
                         </div>
                     </div>
 
