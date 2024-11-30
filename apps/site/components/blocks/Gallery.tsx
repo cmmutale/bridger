@@ -4,10 +4,6 @@ import { AspectRatio } from '../ui/aspect-ratio';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
 // import required modules
 import Image from 'next/image';
 
@@ -37,14 +33,6 @@ const data = [
             },
         ]
     },
-    // {
-    //     title: "Local & Small businesses",
-    //     items: []
-    // },
-    // {
-    //     title: "Non-profits & Startups",
-    //     items: []
-    // },
 ]
 
 export default function Gallery() {
@@ -54,10 +42,12 @@ export default function Gallery() {
                 <div className="section__content space-y-4">
                     <div className='space-y-4'>
                         <div className="section__copy">
-                            {/* <p className='text-sm font-bold'>Design and Development</p> */}
                             <h1 className='capitalize font-bold text-3xl lg:text-4xl'>
                                 Our work
                             </h1>
+                            <p className="text-base">
+                                Got a project in mind? Let’s bring your vision to life! 🚀
+                            </p>
                         </div>
                         <div className="section__cta">
                             <div className="button--row flex flex-wrap gap-4">
@@ -67,7 +57,7 @@ export default function Gallery() {
                                         variant={`outline`}
                                         className='rounded-full hover:px-12 hover:tracking-widest 
                                     duration-300 transition-all hover:font-black
-                                    active:px-6'>See the full catalogue</Button>
+                                    active:px-6'>Get in touch with us!</Button>
                                 </Link>
                             </div>
                         </div>
@@ -79,15 +69,15 @@ export default function Gallery() {
                                 data[0].items.map((_, i) => (
                                     <div key={i}>
                                         <div className=''>
-                                        <AspectRatio className='relative'>
-                                            <div className="sheeth absolute top-0 left-0 h-full w-full"></div>
-                                            <Image
-                                                fill={true}
-                                                src={_.image}
-                                                alt={_.alt}
-                                                className='object-cover object-top hover:cursor-grab active:cursor-grabbing'
-                                            />
-                                        </AspectRatio>
+                                            <AspectRatio className='relative'>
+                                                <div className="sheeth absolute top-0 left-0 h-full w-full"></div>
+                                                <Image
+                                                    fill={true}
+                                                    src={_.image}
+                                                    alt={_.alt}
+                                                    className='object-cover object-top hover:cursor-grab active:cursor-grabbing'
+                                                />
+                                            </AspectRatio>
                                         </div>
                                         <p className='font-bold text-center pt-8'>{_.desc}</p>
                                     </div>

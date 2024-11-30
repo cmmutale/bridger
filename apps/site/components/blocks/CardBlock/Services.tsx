@@ -1,9 +1,26 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { LucidePaintbrush, LucideSettings, LucideMonitor } from 'lucide-react'
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MeetingLink from '@/components/ui/meeting-link'
+
+const services = [
+    {
+        name: 'Development & Design',
+        description: 'We design and develop your website from ground up building fast and secure.',
+        icon: <LucideMonitor className='size-12' />,
+    },
+    {
+        name: 'Branding & Marketing',
+        description: 'Designing websites and giving you the right words to tell your story.',
+        icon: <LucidePaintbrush className='size-12' />,
+    },
+    {
+        name: 'Maintenance & hosting',
+        description: `We host your website making sure it's secure and always running.`,
+        icon: <LucideSettings className='size-12' />,
+    },
+]
 
 export default function Services() {
     return (
@@ -29,41 +46,21 @@ export default function Services() {
 
                     <div className="cards grid text-left">
                         <div className='grid lg:grid-cols-3'>
-                            <Card>
-                                <CardHeader>
-                                    <LucideMonitor className='w-8 h-8' />
-                                    <CardTitle>Development & Design</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className='font-semibold clip-text'>
-                                        We design and develop your website from ground up building fast and secure.
-                                    </p>
-                                </CardContent>
-                            </Card>
-
-                            <Card>
-                                <CardHeader>
-                                    <LucidePaintbrush className='w-8 h-8' />
-                                    <CardTitle>Branding & Marketing</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className='font-semibold clip-text'>
-                                        Designing websites and giving you the right words to tell your story.
-                                    </p>
-                                </CardContent>
-                            </Card>
-
-                            <Card>
-                                <CardHeader>
-                                    <LucideSettings className='w-8 h-8' />
-                                    <CardTitle>Maintenance & hosting</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className='font-semibold clip-text'>
-                                        {`We host your website making sure it's secure and always running.`}
-                                    </p>
-                                </CardContent>
-                            </Card>
+                            {services.map((service, index) => {
+                                return (
+                                    <Card key={index} className='text-center'>
+                                        <CardHeader>
+                                            <span className='mx-auto'>{service.icon}</span>
+                                            <CardTitle>{service.name}</CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <p className='font-semibold clip-text'>
+                                                {service.description}
+                                            </p>
+                                        </CardContent>
+                                    </Card>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
