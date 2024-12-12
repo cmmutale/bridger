@@ -32,6 +32,7 @@ const pricing = [
         ],
     },
 ]
+
 export default function Pricing() {
     return (
         <section className='section branding-primary'>
