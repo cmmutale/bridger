@@ -50,7 +50,7 @@ export default function Programs() {
             <div 
             style={{
                 '--column-min-width': '320px',
-            }}
+            } as React.CSSProperties}
             className="u-container u-grid auto-grid">
                 <div className="textbox font-[family-name:var(--font-body)] text-brand-black 
       space-y-[var(--space-m)]">
@@ -72,7 +72,7 @@ export default function Programs() {
                     <div 
                     style={{
                         '--column-min-width': '240px',
-                    }}
+                    } as React.CSSProperties}
                     className="card-container-content u-grid auto-grid">
 
                         {

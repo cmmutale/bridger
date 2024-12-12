@@ -56,7 +56,7 @@ export default function Offering() {
                     <div 
                     style={{
                         '--column-min-width': '240px',
-                    }}
+                    }as React.CSSProperties}
                     className="card-container u-grid auto-grid">
                         {
                             offers.map((offer, index) => {

@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from '../ui/button'
 
 
 const teachers = [
@@ -54,7 +52,7 @@ export default function TeachersIntro() {
                     <div 
                     style={{
                         '--column-min-width': '320px',
-                    }}
+                    }as React.CSSProperties}
                     className="card-container u-grid auto-grid">
                         {
                             teachers.map((teacher, index) => {
