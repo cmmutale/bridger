@@ -12,9 +12,9 @@ export default function Header() {
                 <div className="logo">
                     <span className="sr-only">Little Horizons Logo</span>
                     <Image
-                        src={`logo.svg`}
-                        width={100}
-                        height={200}
+                        src={`lhd-logo.svg`}
+                        width={125}
+                        height={100}
                         alt='logo'
                     />
                 </div>

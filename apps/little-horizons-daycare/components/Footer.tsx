@@ -31,7 +31,7 @@ export default function Footer() {
                     <div className="logo">
                         <span className="sr-only">Little Horizons Logo</span>
                         <Image
-                            src={`logo.svg`}
+                            src={`lhd-logo.svg`}
                             width={150}
                             height={200}
                             alt='logo'
