@@ -97,7 +97,7 @@ export default function FAQ() {
                             {
                                 faqGallery.map((item, index) => {
                                     return (
-                                        <div className={`image relative h-60 sm:h-80 
+                                        <div className={`image relative h-52 sm:h-80 
                                         aspect-square rounded-lg overflow-hidden 
                                         ${rotate[index]}`} key={index}>
                                             <div className="overlay absolute top-0 left-0 
