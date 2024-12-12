@@ -28,7 +28,7 @@ export default function AboutIntro() {
                 </div>
                 <div className="cta flex justify-start">
                     <Link href={`#`}>
-                        <Button className='capitalize'>Learn more about us</Button>
+                        <Button className='capitalize'>Learn more</Button>
                     </Link>
                 </div>
             </div>

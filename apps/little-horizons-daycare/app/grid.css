@@ -22,7 +22,29 @@
     grid-template-columns: repeat(auto-fit, minmax(min(var(--_column-min-width), 100%), 1fr));
 }
 
-.new-section > div{
+.two-column {
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+}
+
+.new-section > .u-container{
     padding-block: var(--space-3xl);
     padding-inline: var(--space-l);
+}
+
+section.wrapper{
+  display: grid;
+  grid-template-areas: "stack";
+}
+
+section.wrapper > div {
+  grid-area: stack;
+}
+
+section.wrapper > div:nth-child(1) {
+  z-index: 0; /* Lower stacking order */
+}
+
+section.wrapper > div:nth-child(2) {
+  z-index: 10; /* Higher stacking order */
 }

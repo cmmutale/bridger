@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
+import { HiMenuAlt3 } from "react-icons/hi";
+
 
 export default function Header() {
     return (
@@ -50,9 +52,9 @@ export default function Header() {
                             </Button>
                         </Link>
                     </div>
-                    <Button className='lg:hidden'>
-                            menu
-                        </Button>
+                    <Button variant={`default`} size={`icon`} className='lg:hidden'>
+                        <HiMenuAlt3 />
+                    </Button>
                 </div>
             </div>
         </header>
