@@ -3,6 +3,7 @@ import { Card, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { Separator } from '../ui/separator'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import MeetingLink from '../ui/meeting-link'
 
 export default function Cta() {
     return (
@@ -22,9 +23,9 @@ export default function Cta() {
                                 <Separator className='bg-[var(--branding-alt)] h-[4px]' />
                             </CardHeader>
                             <CardFooter>
-                                <Link href={`#`} className='block' >
+                                <MeetingLink>
                                     <Button className='w-full'>Lets Chat</Button>
-                                </Link>
+                                </MeetingLink>
                             </CardFooter>
                         </Card>
                         <Card className='bg-[var(--branding-primary)] text-[var(--branding-secondary)]'>
@@ -33,9 +34,9 @@ export default function Cta() {
                                 <Separator className='bg-[var(--branding-alt)] h-[4px]' />
                             </CardHeader>
                             <CardFooter>
-                                <Link href={`#`} className='block' >
+                                <MeetingLink>
                                     <Button className='w-full' variant={`secondary`}>Try A Template</Button>
-                                </Link>
+                                </MeetingLink>
                             </CardFooter>
                         </Card>
                     </div>

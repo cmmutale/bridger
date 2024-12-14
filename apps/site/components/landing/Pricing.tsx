@@ -4,6 +4,7 @@ import { LucideCheckCircle, LucideCheck, PanelRightInactive } from 'lucide-react
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import MeetingLink from '../ui/meeting-link'
 
 const tiers = [
     {
@@ -80,9 +81,9 @@ export default function Pricing() {
                                             </ul>
                                         </CardContent>
                                         <CardFooter>
-                                            <Link href={`#`} className='block w-full'>
+                                            <MeetingLink>
                                                 <Button className='w-full' variant={tier.featured ? "secondary" : "default"}>Get Started</Button>
-                                            </Link>
+                                            </MeetingLink>
                                         </CardFooter>
                                     </Card>
                                 )

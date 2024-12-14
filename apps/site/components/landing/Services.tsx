@@ -4,6 +4,7 @@ import { LucidePaintbrush, LucideSettings, LucideMonitor } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import MeetingLink from '@/components/ui/meeting-link'
 import { Separator } from '@/components/ui/separator'
+import Link from 'next/link'
 
 const services = [
     {
@@ -52,7 +53,9 @@ export default function Services() {
                                         </p>
                                     </CardContent>
                                     <CardFooter>
+                                        <Link href={`/services`} className='block w-full'>
                                         <Button className='w-full'>Learn More</Button>
+                                        </Link>
                                     </CardFooter>
                                 </Card>
                             )

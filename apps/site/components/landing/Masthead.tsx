@@ -17,9 +17,11 @@ export default function Masthead() {
                             Buy A Website
                         </Button>
                     </MeetingLink>
-                    <Button size={`lg`} variant={`secondary`}>
-                        Reserve A Strategy Call
-                    </Button>
+                    <MeetingLink>
+                        <Button size={`lg`} variant={`secondary`}>
+                            Reserve A Strategy Call
+                        </Button>
+                    </MeetingLink>
                 </div>
             </div>
         </section>

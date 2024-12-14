@@ -20,7 +20,7 @@ export default function AboutIntro() {
                             starting from scratch or improving an existing site, our team
                             ensures your website not only looks great but works seamlessly for your goals.
                         </p>
-                        <Link href={`/about-us`} className='block'>
+                        <Link href={`/about`} className='block'>
                             <Button>
                                 Learn More About Us
                             </Button>

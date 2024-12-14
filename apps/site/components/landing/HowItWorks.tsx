@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import MeetingLink from '../ui/meeting-link'
 
 const process = [
     {
@@ -69,9 +70,9 @@ export default function HowItWorks() {
                         </div>
                     </div>
                     <div className="cta">
-                        <Link href={`#`}>
+                        <MeetingLink>
                         <Button className='w-full sm:w-auto'>Get Started Today</Button>
-                        </Link>
+                        </MeetingLink>
                     </div>
                 </div>
 
