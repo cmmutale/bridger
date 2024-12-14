@@ -1,5 +1,4 @@
-
-import { Outfit, Praise } from "next/font/google"
+import { Outfit, Praise, Prompt } from "next/font/google"
 import localFont from "next/font/local";
 
 export const fontAlt = Praise({
@@ -8,18 +7,20 @@ export const fontAlt = Praise({
     variable: "--font-alt"
 });
 
-export const fontBody = Outfit({
+export const fontBody = Prompt({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700", "800", "900"],
     variable: "--font-body"
 });
 
-// export const fontHeading = localFont({
-//     src: "./BasementGrotesque.otf",
-//     variable: "--font-heading",
-// });
+export const fontHeading = Prompt({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800", "900"],
+    variable: "--font-heading"
+});
 
-export const fontHeading = localFont({
+
+export const fontTest = localFont({
     src: [
         {
             path: "./Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Light.woff",
