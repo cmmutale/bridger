@@ -68,7 +68,7 @@ export default function Header() {
                         </Button>
                     </SheetTrigger>
                     <SheetContent side={`top`} className='space-y-[var(--space-m)] border-b-[4px] border-[var(--branding-alt)]'>
-                        <SheetClose className='absolute top-[var(--space-3xs)] right-[var(--space-m)]'>
+                        <SheetClose className='ml-auto block'>
                             <Button asChild variant={`ghost`} size={`icon`} className='border-[var(--branding-alt)]'>
                                 <div className="vector-icon relative">
                                     <span className="block h-[24px] bg-black w-[3px] absolute -rotate-45"></span>
@@ -76,7 +76,7 @@ export default function Header() {
                                 </div>
                             </Button>
                         </SheetClose>
-                        <SheetHeader>
+                        <SheetHeader className='sr-only'>
                             <SheetTitle className='sr-only'>Mobile menu</SheetTitle>
                         </SheetHeader>
                         <nav className="flex flex-col gap-[var(--space-m)] ml-auto text-right">
