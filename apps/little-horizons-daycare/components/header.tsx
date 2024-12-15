@@ -7,7 +7,6 @@ import { IoCloseSharp } from "react-icons/io5";
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
