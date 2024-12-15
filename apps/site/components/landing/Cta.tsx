@@ -31,7 +31,7 @@ export default function Cta() {
                         <Card className='bg-[var(--branding-alt)] text-[var(--branding-secondary)]'>
                             <CardHeader className='space-y-[var(--space-m)]'>
                                 <CardTitle>Test out one of our templates today.</CardTitle>
-                                <Separator className='bg-[var(--branding-alt)] h-[4px]' />
+                                <Separator className='bg-[var(--branding-secondary)] h-[4px]' />
                             </CardHeader>
                             <CardFooter>
                                 <MeetingLink>

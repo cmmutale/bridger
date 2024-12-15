@@ -31,8 +31,9 @@
     grid-template-columns: repeat(auto-fit, minmax(min(var(--_column-min-w), 100%), 1fr));
 }
 
+/* CAROUSEL SCROLLER */
 .reel {
-
+    position: relative;
 }
 
 .reel_container {

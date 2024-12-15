@@ -13,7 +13,7 @@ export default function AboutIntro() {
                     </h2>
                     <div className='space-y-[var(--space-m)]'>
                         <p className='block'>
-                            At The Crew Designs, we specialize in creating affordable, custom
+                            At Nodedrop, we specialize in creating affordable, custom
                             websites for local businesses and solopreneurs. From design and
                             development to hosting and maintenance, we’re here to take the
                             stress out of building your online presence. Whether you’re
