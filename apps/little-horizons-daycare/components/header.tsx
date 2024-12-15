@@ -3,6 +3,34 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { HiMenuAlt3 } from "react-icons/hi";
+import { IoCloseSharp } from "react-icons/io5";
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from "@/components/ui/sheet"
+
+const navigation = [
+    {
+        label: 'Home',
+        href: '/'
+    },
+    {
+        label: 'About Us',
+        href: '/'
+    },
+    {
+        label: 'Programs & Activities',
+        href: '/'
+    },
+    {
+        label: 'Contact Us',
+        href: '/'
+    }
+]
 
 
 export default function Header() {
@@ -22,26 +50,15 @@ export default function Header() {
                 <div className="navigation flex gap-4">
                     <nav>
                         <ul className='max-lg:hidden lg:flex hidden h-full items-center'>
-                            <li>
-                                <Link href={`#`}>
-                                    <Button size={`sm`} variant={`ghost`}>Home</Button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={`#`}>
-                                    <Button size={`sm`} variant={`ghost`}>About Us</Button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={`#`}>
-                                    <Button size={`sm`} variant={`ghost`}>Programs & Activities</Button>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={`#`}>
-                                    <Button size={`sm`} variant={`ghost`}>Contact Us</Button>
-                                </Link>
-                            </li>
+                            {
+                                navigation.map((item, index) => (
+                                    <li key={index}>
+                                        <Link href={item.href}>
+                                            <Button size={`sm`} variant={`ghost`}>{item.label}</Button>
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </nav>
 
@@ -52,9 +69,54 @@ export default function Header() {
                             </Button>
                         </Link>
                     </div>
-                    <Button variant={`default`} size={`icon`} className='lg:hidden'>
-                        <HiMenuAlt3 />
-                    </Button>
+
+                    <Sheet>
+                        <SheetTrigger className='lg:hidden'>
+                            <Button variant={`default`} size={`icon`}>
+                                <HiMenuAlt3 />
+                            </Button>
+                        </SheetTrigger>
+                        <SheetContent>
+                            <SheetTrigger className='block ml-auto'>
+                                <Button variant={`default`} size={`icon`}>
+                                    <IoCloseSharp />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetHeader>
+                                <SheetTitle className='sr-only'>Main navigation</SheetTitle>
+                            </SheetHeader>
+                            <div className='flex flex-col justify-between grow '>
+                            <nav>
+                                <ul className='text-center'>
+                                    {
+                                        navigation.map((item, index) => (
+                                            <li key={index}>
+                                                <Link href={item.href}>
+                                                    <Button 
+                                                    size={`lg`} 
+                                                    variant={`ghost`}
+                                                    className='text-xl'
+                                                    >{item.label}</Button>
+                                                </Link>
+                                            </li>
+                                        ))
+                                    }
+
+                                </ul>
+                            </nav>
+
+                            <div className="action mt-[var(--space-l)] flex justify-center">
+                                <Link href={`#`}>
+                                    <Button>
+                                        Enroll Today
+                                    </Button>
+                                </Link>
+                            </div>
+                            </div>
+
+                        </SheetContent>
+                    </Sheet>
+
                 </div>
             </div>
         </header>
