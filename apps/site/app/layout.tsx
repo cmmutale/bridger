@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Cta from '@/components/landing/Cta'
 
 import { fontAlt, fontBody, fontHeading } from "./fonts";
 
@@ -20,7 +23,15 @@ export default function RootLayout({
         className={`${fontAlt.variable} 
         ${fontBody.variable} 
         ${fontHeading.variable} antialiased`}>
-        {children}
+        <div>
+          <Header />
+          <main>
+            {children}
+            <Cta />
+          </main>
+          <Footer />
+        </div>
+
       </body>
     </html>
   );

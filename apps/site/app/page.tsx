@@ -1,26 +1,25 @@
-import MeetTheTeam from '@/components/blocks/CardBlock/MeetTheTeam'
-import Pricing from '@/components/blocks/CardBlock/Pricing'
-import ProblemStatement from '@/components/blocks/CardBlock/ProblemStatement'
-import Services from '@/components/blocks/CardBlock/Services'
-import StepByStep from '@/components/blocks/CardBlock/StepByStep'
-import Footer from '@/components/blocks/Footer'
-import Gallery from '@/components/blocks/Gallery'
-import Header from '@/components/blocks/Header'
-import Masthead from '@/components/blocks/Masthead'
+// import MeetTheTeam from '@/components/blocks/CardBlock/MeetTheTeam'
+import Pricing from '@/components/landing/Pricing'
+import Services from '@/components/landing/Services'
+import ProblemStatement from '@/components/landing/ProblemStatement'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Masthead from '@/components/landing/Masthead'
+import AboutIntro from '@/components/landing/AboutIntro'
+import HowItWorks from '@/components/landing/HowItWorks'
+import Showcase from '@/components/landing/Showcase'
+import Cta from '@/components/landing/Cta'
 
 export default function page() {
   return (
-    <div>
-      <Header />
+    <>
       <Masthead />
+      <AboutIntro />
       <Services />
-      <Gallery />
+      <Showcase />
       <ProblemStatement />
-      <MeetTheTeam />
-      <StepByStep />
+      <HowItWorks />
       <Pricing />
-      {/* <CallToAction /> */}
-      <Footer />
-    </div>
+    </>
   )
 }

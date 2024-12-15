@@ -9,7 +9,7 @@ interface LogoProps {
 
 export default function Logo({ width = 150, link, height = 150 }: LogoProps) {
     return (
-        <Link className='block' href={link ? "/" : "#"}>
+        <Link className='block' href={link ? "/" : "/"}>
             <Image
                 src={`/media/svg/logo.svg`}
                 alt='image logo'

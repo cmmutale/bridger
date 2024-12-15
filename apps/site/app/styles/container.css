@@ -1,0 +1,63 @@
+/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1500,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,m,2xl,12 */
+
+:root {
+    --grid-max-width: 75.94rem;
+    --grid-gutter: var(--space-s-m, clamp(1rem, 0.7542rem + 1.2291vw, 1.6875rem));
+    --grid-columns: 12;
+}
+
+.u-container {
+    max-width: var(--grid-max-width);
+    padding-inline: var(--grid-gutter);
+    margin-inline: auto;
+    width: 100%;
+}
+
+.u-container--narrow {
+    max-width: calc(0.75 * var(--grid-max-width));
+}
+
+.u-grid {
+    display: grid;
+    gap: var(--grid-gutter);
+}
+
+.new-section > .u-container {
+    padding-block: var(--space-2xl);
+}
+
+.auto-grid {
+    --_column-min-w: var(--column-min-w, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--_column-min-w), 100%), 1fr));
+}
+
+/* CAROUSEL SCROLLER */
+.reel {
+    position: relative;
+}
+
+.reel_container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: var(--space-s-m);
+}
+
+@media screen and (min-width: 640px) {
+    .reel_container {
+        grid-auto-columns: 45%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .reel_container {
+        grid-auto-columns: 30%;
+    }
+}
+
+.reel_container > * {
+    scroll-snap-align: middle;
+}
