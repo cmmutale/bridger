@@ -44,7 +44,7 @@ const tiers = [
 
 export default function Pricing() {
     return (
-        <section className="wrapper new-section">
+        <section className="wrapper new-section" id='pricing'>
             <div className="container_background"></div>
             <div className="container_content u-container space-y-[var(--space-m)] u-container--narrow">
                 <div className="textbox">
@@ -55,7 +55,8 @@ export default function Pricing() {
                         {
                             tiers.map((tier, index) => {
                                 return (
-                                    <Card key={index} className={`border-[4px] border-[var(--branding-alt)] 
+                                    <Card key={index} 
+                                    className={`border-[4px] border-[var(--branding-alt)] 
                                     ${tier.featured ? "bg-[var(--branding-primary)] text-[var(--branding-secondary)]" :
                                             "bg-[var(--branding-secondary)]"}`}>
                                         <CardHeader className='space-y-[var(--space-s)]'>
@@ -74,7 +75,10 @@ export default function Pricing() {
                                                 {
                                                     tier.features.map((feature, index) => {
                                                         return (
-                                                            <li key={index}>{feature}</li>
+                                                            <li key={index} className='flex gap-[var(--space-3xs)]'>
+                                                                <span className='block shrink-0 font-bold'>-</span>
+                                                                <span className='block'>{feature}</span>
+                                                            </li>
                                                         )
                                                     })
                                                 }
@@ -82,7 +86,8 @@ export default function Pricing() {
                                         </CardContent>
                                         <CardFooter>
                                             <MeetingLink>
-                                                <Button className='w-full' variant={tier.featured ? "secondary" : "default"}>Get Started</Button>
+                                                <Button className='w-full' 
+                                                variant={tier.featured ? "secondary" : "default"}>Get Started</Button>
                                             </MeetingLink>
                                         </CardFooter>
                                     </Card>

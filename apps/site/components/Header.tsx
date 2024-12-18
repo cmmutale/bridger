@@ -27,6 +27,10 @@ const navigation = [
         href: `/templates`
     },
     {
+        label: `Pricing`,
+        href: `/#pricing`
+    },
+    {
         label: `About`,
         href: `/about`
     },
@@ -34,7 +38,8 @@ const navigation = [
 
 export default function Header() {
     return (
-        <header className="wrapper sticky top-0 z-50 bg-[var(--branding-secondary)] text-[var(--branding-alt)]">
+        <header className="wrapper sticky top-0 z-50 bg-[var(--branding-secondary)] 
+        text-[var(--branding-alt)] shadow-2xl">
             <div className="content container mx-auto flex items-center u-container h-20 justify-between">
                 <div className="logo">
                     <Logo />
