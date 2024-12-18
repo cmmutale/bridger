@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 
 export default function AboutIntro() {
     return (
-        <section className="wrapper bg-brand-black-5 new-section">
+        <section className="wrapper bg-brand-black-5 new-section" id='about'>
             <div className="space-y-[var(--space-m)] u-container u-grid place-content-center">
                 <div className="textbox space-y-[var(--space-s)]">
                     <h2 className='font-[family-name:var(--font-heading)] fs-2 capitalize 

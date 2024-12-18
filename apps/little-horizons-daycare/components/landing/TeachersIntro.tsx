@@ -34,7 +34,7 @@ const teachers = [
 
 export default function TeachersIntro() {
     return (
-        <section className="wrapper new-section text-brand-black">
+        <section className="wrapper new-section text-brand-black" id='meet-the-teachers'>
             <div className="u-container u-grid space-y-[var(--space-m)]">
                 <div className="textbox max-w-3xl mx-auto space-y-4 text-center">
                     <h2 className="font-[family-name:var(--font-heading)] 

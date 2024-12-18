@@ -15,19 +15,14 @@ import Footer from '@/components/Footer'
 export default function page() {
   return (
     <>
-      <Header />
-      <main>
-        <Masthead />
-        <AboutIntro />
-        <Programs />
-        <Offering />
-        <TeachersIntro />
-        <VirtualTour />
-        <Testimonials />
-        <FAQ />
-        <Cta />
-      </main>
-      <Footer />
+      <Masthead />
+      <AboutIntro />
+      <Programs />
+      <Offering />
+      <TeachersIntro />
+      <VirtualTour />
+      <Testimonials />
+      <FAQ />
     </>
   )
 }

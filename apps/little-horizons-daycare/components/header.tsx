@@ -20,15 +20,15 @@ const navigation = [
     },
     {
         label: 'About Us',
-        href: '/'
+        href: '/#about'
     },
     {
         label: 'Programs & Activities',
-        href: '/'
+        href: '/#programs-and-activities'
     },
     {
         label: 'Contact Us',
-        href: '/'
+        href: '/contact-us'
     }
 ]
 
