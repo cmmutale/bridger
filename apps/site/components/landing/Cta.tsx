@@ -9,7 +9,8 @@ export default function Cta() {
     return (
         <section className="wrapper new-section bg-white py-[var(--space-l)]">
             <div className="container_background"></div>
-            <div className="container_content u-container u-container--narrow bg-[var(--branding-primary)] text-[var(--branding-secondary)] space-y-[var(--space-m)]">
+            <div className="container_content u-container u-container--narrow 
+            bg-[var(--branding-primary)] text-[var(--branding-secondary)] space-y-[var(--space-m)] rounded-md">
                 <div className="textbox space-y-[var(--space-s)]">
                     <h2 className='font-bold fs-3 font-[family-name:var(--font-heading)] text-center'>Let’s Make Your Vision a Reality</h2>
                     <p className='mx-auto text-center'>Click below to get started. Your dream website is just a few clicks away!

@@ -85,32 +85,32 @@ export default function Header() {
                                 <SheetTitle className='sr-only'>Main navigation</SheetTitle>
                             </SheetHeader>
                             <div className='flex flex-col justify-between grow '>
-                            <nav>
-                                <ul className='text-center'>
-                                    {
-                                        navigation.map((item, index) => (
-                                            <li key={index}>
-                                                <Link href={item.href}>
-                                                    <Button 
-                                                    size={`lg`} 
-                                                    variant={`ghost`}
-                                                    className='text-xl'
-                                                    >{item.label}</Button>
-                                                </Link>
-                                            </li>
-                                        ))
-                                    }
+                                <nav>
+                                    <ul className='text-center'>
+                                        {
+                                            navigation.map((item, index) => (
+                                                <li key={index}>
+                                                    <Link href={item.href}>
+                                                        <Button
+                                                            size={`lg`}
+                                                            variant={`ghost`}
+                                                            className='text-xl'
+                                                        >{item.label}</Button>
+                                                    </Link>
+                                                </li>
+                                            ))
+                                        }
 
-                                </ul>
-                            </nav>
+                                    </ul>
+                                </nav>
 
-                            <div className="action mt-[var(--space-l)] flex justify-center">
-                                <Link href={`#`}>
-                                    <Button>
-                                        Enroll Today
-                                    </Button>
-                                </Link>
-                            </div>
+                                <div className="action mt-[var(--space-l)] flex justify-center">
+                                    <Link href={`#`}>
+                                        <Button>
+                                            Enroll Today
+                                        </Button>
+                                    </Link>
+                                </div>
                             </div>
 
                         </SheetContent>

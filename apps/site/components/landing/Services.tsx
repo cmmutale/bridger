@@ -31,7 +31,7 @@ export default function Services() {
             <div className="cotnainer_content u-container space-y-[var(--space-m)]">
                 <div className="textbox">
                     <h2 className='font-[family-name:var(--font-heading)] 
-                    font-bold fs-4 text-center'>What We Do Best</h2>
+                    font-bold fs-3 text-center'>What We Do Best</h2>
                 </div>
                 <div className="card-grid">
                     <div
@@ -41,7 +41,7 @@ export default function Services() {
                         className="card-grid_content u-grid auto-grid gap-[var(--space-l)]">
                         {services.map((service, index) => {
                             return (
-                                <Card key={index} className='bg-[var(--branding-secondary)] text-[var(--branding-alt)] '>
+                                <Card key={index} className='bg-[var(--branding-secondary)] text-[var(--branding-alt)] rounded-md'>
                                     <CardHeader className='space-y-[var(--space-s)]'>
                                         {/* <span className='mx-auto'>{service.icon}</span> */}
                                         <CardTitle>{service.name}</CardTitle>

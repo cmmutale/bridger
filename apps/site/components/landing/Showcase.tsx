@@ -8,6 +8,7 @@ import { Button } from '../ui/button';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { Separator } from '../ui/separator';
+import { CheckIcon } from 'lucide-react';
 
 const data = [
     {
@@ -39,45 +40,49 @@ const data = [
 
 export default function Showcase() {
     return (
-        <section className='section  branding-primary'>
-            <div className="section__wrapper container mx-auto px-4 sm:px-6 py-24">
-                <div className="section__content space-y-[var(--space-m)]">
-                    <div className='space-y-[var(--space-m)]'>
-                        <div className="section__copy">
-                            <h1 className='capitalize font-bold fs-4 text-center'>
-                                Our work
-                            </h1>
-                        </div>
-                    </div>
+        <section className="wrapper new-section">
+            <div className="container_background"></div>
+            <div className="container_content u-container u-grid auto-grid gap-[var(--space-m)] items-center">
+                <div className="textbox space-y-[var(--space-m)]">
+                    <h1 className='capitalize font-bold fs-3'>
+                        The Platforms We Use
+                    </h1>
+                    <p>
+                        We work on all the best platforms to bring your vision to life:
+                    </p>
+                    <ul className=''>
+                        <li className='flex gap-[var(--space-3xs)]'>
+                            <span><CheckIcon className='block shrink-0' />
+                            </span> <span className='block'>WordPress</span></li>
+                        <li className='flex gap-[var(--space-3xs)]'>
+                            <span><CheckIcon className='block shrink-0' />
+                            </span> <span className='block'>Webflow</span></li>
+                        <li className='flex gap-[var(--space-3xs)]'>
+                            <span><CheckIcon className='block shrink-0' />
+                            </span> <span className='block'>Squarespace</span></li>
+                        <li className='flex gap-[var(--space-3xs)]'>
+                            <span><CheckIcon className='block shrink-0' />
+                            </span> <span className='block'>Vercel</span></li>
+                        <li className='flex gap-[var(--space-3xs)]'>
+                            <span><CheckIcon className='block shrink-0' />
+                            </span> <span className='block'>Framer</span></li>
+                    </ul>
+                </div>
 
-                    <div className='card-grid reel'>
-                        <div className='card-grid_content reel_container gap-[var(--space-m)]'>
-                            {
-                                data[0].items.map((_, index) => (
-                                    <Card key={index} className='bg-[var(--branding-secondary)] text-[var(--branding-alt)] '>
-                                        <CardHeader className='space-y-[var(--space-s)]'>
-                                            <CardTitle>{_.desc}</CardTitle>
-                                            <Separator className='bg-[var(--branding-alt)] h-[4px]' />
-                                        </CardHeader>
-                                        <CardContent>
-                                            <div className="card-body">
-                                                <div className="image relative h-52">
-                                                    <Image
-                                                        src={_.image}
-                                                        alt=''
-                                                        fill
-                                                        className='object-cover object-top'
-                                                    />
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                        <CardFooter>
-                                            <Button className='w-full'>Learn More</Button>
-                                        </CardFooter>
-                                    </Card>
-                                ))
-                            }
-                        </div>
+                <div className='card-grid space-y-[var(--space-m)]'>
+                    <div className='card-grid_content gap-[var(--space-m)] u-grid grid-cols-2'>
+                        {
+                            data[0].items.map((_, index) => (
+                                <div key={index} className="image relative h-52">
+                                    <Image
+                                        src={_.image}
+                                        alt=''
+                                        fill
+                                        className='object-cover object-top'
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
                     <div className="button--row flex flex-wrap gap-[var(--space-m)] justify-center">
                         <Link href={`/templates`} className='block'>
@@ -86,6 +91,7 @@ export default function Showcase() {
                     </div>
                 </div>
             </div>
+
         </section>
     )
 }

@@ -20,24 +20,40 @@ export default function ProblemStatement() {
                             </CardHeader>
                             <CardContent>
                                 <ul>
-                                    <li>
-                                        Struggling to pick the right tools or platform for your website.
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='block font-bold shrink-0'>-</span>
+                                        <span>Struggling to pick the right tools or platform for your website.
+                                        </span>
                                     </li>
-                                    <li>Endless project timelines and budget overruns.</li>
-                                    <li>Neglecting updates, security, and regular maintenance.</li>
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='block font-bold shrink-0'>-</span>
+                                        <span>Endless project timelines and budget overruns.
+                                        </span>
+                                    </li>
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='block font-bold shrink-0'>-</span>
+                                        <span>Neglecting updates, security, and regular maintenance.
+                                        </span>
+                                    </li>
                                 </ul>
                             </CardContent>
                         </Card>
-                        <Card className='scale-110 border-[4px] border-[var(--branding-alt)]'>
+                        <Card className='scale-105 border-[4px] border-[var(--branding-alt)]'>
                             <CardHeader className="space-y-[var(--space-s)]">
                                 <CardTitle>The New Way</CardTitle>
                                 <Separator className='bg-[var(--branding-alt)] h-[4px]' />
                             </CardHeader>
                             <CardContent>
                                 <ul>
-                                    <li>Launch your site on time and within budget — every single time.</li>
-                                    <li> Focus on growing your business while we handle the tech.</li>
-                                    <li> Attract leads and reach a wider audience 24/7.</li>
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='font-bold shrink-0 block'>-</span>
+                                        <span>Launch your site on time and within budget — every single time.</span></li>
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='font-bold shrink-0 block'>-</span>
+                                        <span>Focus on growing your business while we handle the tech.</span></li>
+                                    <li className='flex gap-[var(--space-3xs)]'>
+                                        <span className='font-bold shrink-0 block'>-</span>
+                                        <span>Attract leads and reach a wider audience 24/7.</span></li>
                                 </ul>
                             </CardContent>
                         </Card>
