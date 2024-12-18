@@ -46,12 +46,12 @@ const programs = [
 
 export default function Programs() {
     return (
-        <section className="wrapper new-section">
-            <div 
-            style={{
-                '--column-min-width': '320px',
-            } as React.CSSProperties}
-            className="u-container u-grid auto-grid">
+        <section className="wrapper new-section" id='programs-and-activities'>
+            <div
+                style={{
+                    '--column-min-width': '320px',
+                } as React.CSSProperties}
+                className="u-container u-grid auto-grid">
                 <div className="textbox font-[family-name:var(--font-body)] text-brand-black 
       space-y-[var(--space-m)]">
                     <h2 className='font-[family-name:var(--font-heading)] fs-2'>
@@ -69,11 +69,11 @@ export default function Programs() {
                 </div>
 
                 <div className="card-container">
-                    <div 
-                    style={{
-                        '--column-min-width': '240px',
-                    } as React.CSSProperties}
-                    className="card-container-content u-grid auto-grid">
+                    <div
+                        style={{
+                            '--column-min-width': '240px',
+                        } as React.CSSProperties}
+                        className="card-container-content u-grid auto-grid">
 
                         {
                             programs.map((program, index) => {
@@ -88,22 +88,22 @@ export default function Programs() {
                                             />
                                         </div>
                                         <div className="card-content pt-4 space-y-2">
-                                        <div className="card-header">
-                                            <h3 className="card-title font-bold fs-0 text-brand-black">
-                                                {program.age}
-                                            </h3>
-                                        </div>
-                                        <div className="card-body">
-                                            <p className='text-brand-black-75'>
-                                                {program.description}
-                                            </p>
-                                        </div>
-                                        <div className="card-footer">
-                                            <Link href={`#`}>
-                                                <Button size={`sm`} className={`shadow-md ${program.color.button}`}>
-                                                    See program</Button>
-                                            </Link>
-                                        </div>
+                                            <div className="card-header">
+                                                <h3 className="card-title font-bold fs-0 text-brand-black">
+                                                    {program.age}
+                                                </h3>
+                                            </div>
+                                            <div className="card-body">
+                                                <p className='text-brand-black-75'>
+                                                    {program.description}
+                                                </p>
+                                            </div>
+                                            <div className="card-footer">
+                                                <Link href={`#`}>
+                                                    <Button size={`sm`} className={`shadow-md ${program.color.button}`}>
+                                                        See program</Button>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 )

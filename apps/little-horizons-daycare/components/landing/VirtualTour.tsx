@@ -7,7 +7,7 @@ import { TbSquareRoundedChevronRight } from "react-icons/tb";
 
 export default function VirtualTour() {
     return (
-        <section className="wrapper new-section bg-brand-black-5 text-brand-black">
+        <section className="wrapper new-section bg-brand-black-5 text-brand-black" id='virtual-tour'>
             <div className="content u-container u-grid auto-grid place-items-center">
                 <div className="textbox order-2 space-y-4">
                     <h2 className='font-[family-name:var(--font-heading)] fs-2'>Explore our state-of-the-art facilities</h2>
