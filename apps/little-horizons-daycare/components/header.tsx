@@ -11,6 +11,19 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    navigationMenuTriggerStyle,
+    NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+import ArrowUp from './icons/Arrow-Up';
+
 
 const navigation = [
     {
@@ -45,21 +58,22 @@ export default function Header() {
                         alt='logo'
                     />
                 </div>
-
                 <div className="navigation flex gap-4">
-                    <nav>
-                        <ul className='max-lg:hidden lg:flex hidden h-full items-center'>
+                    <NavigationMenu className='max-lg:hidden'>
+                        <NavigationMenuList className='my-auto'>
                             {
                                 navigation.map((item, index) => (
-                                    <li key={index}>
-                                        <Link href={item.href}>
-                                            <Button size={`sm`} variant={`ghost`}>{item.label}</Button>
+                                    <NavigationMenuItem key={index}>
+                                        <Link href={item.href} legacyBehavior passHref>
+                                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                                {item.label}
+                                            </NavigationMenuLink>
                                         </Link>
-                                    </li>
+                                    </NavigationMenuItem>
                                 ))
                             }
-                        </ul>
-                    </nav>
+                        </NavigationMenuList>
+                    </NavigationMenu>
 
                     <div className="action lg:block hidden">
                         <Link href={`#`}>
@@ -84,25 +98,23 @@ export default function Header() {
                             <SheetHeader>
                                 <SheetTitle className='sr-only'>Main navigation</SheetTitle>
                             </SheetHeader>
-                            <div className='flex flex-col justify-between grow '>
-                                <nav>
-                                    <ul className='text-center'>
+                            <div className='flex flex-col justify-between grow'>
+                                <NavigationMenu className='mx-auto'>
+                                    <NavigationMenuList className='flex-col gap-[var(--space-xl)] overflow-y-auto'>
                                         {
                                             navigation.map((item, index) => (
-                                                <li key={index}>
-                                                    <Link href={item.href}>
-                                                        <Button
-                                                            size={`lg`}
-                                                            variant={`ghost`}
-                                                            className='text-xl'
-                                                        >{item.label}</Button>
+                                                <NavigationMenuItem key={index}>
+                                                    <Link href={item.href} legacyBehavior passHref>
+                                                        <NavigationMenuLink className={`${navigationMenuTriggerStyle()} !text-3xl text-wrap`}>
+                                                            {item.label}
+                                                        </NavigationMenuLink>
                                                     </Link>
-                                                </li>
+                                                </NavigationMenuItem>
                                             ))
                                         }
+                                    </NavigationMenuList>
+                                </NavigationMenu>
 
-                                    </ul>
-                                </nav>
 
                                 <div className="action mt-[var(--space-l)] flex justify-center">
                                     <Link href={`#`}>
@@ -112,11 +124,16 @@ export default function Header() {
                                     </Link>
                                 </div>
                             </div>
-
                         </SheetContent>
                     </Sheet>
-
                 </div>
+            </div>
+            <div className='fixed z-50 bottom-[var(--space-m)] right-[var(--space-m)]'>
+                <Link href={`#`} className=''>
+                    <Button size={`icon`} className=''>
+                        <ArrowUp className="fill-white stroke-white w-6 h-6" />
+                    </Button>
+                </Link>
             </div>
         </header>
     )
