@@ -45,6 +45,12 @@
       --black-25: 120 4% 5% / 0.25;
       --black-10: 120 4% 5% / 0.10;
       --black-5: 120 4% 5% / 0.05;
+
+      --branding-black: hsl(120, 4%, 5%);
+      --branding-white: hsl(0 0 100%);
+      --branding-primary: hsl(27 100% 54%);
+      --branding-secondary: hsl(138, 100%, 45%);
+      --branding-alt: hsl(290 100% 54%);
     }
 
 }

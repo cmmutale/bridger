@@ -73,7 +73,7 @@ export default function Programs() {
                         style={{
                             '--column-min-width': '240px',
                         } as React.CSSProperties}
-                        className="card-container-content u-grid auto-grid">
+                        className="card-container-content u-grid auto-grid gap-[var(--space-l)]">
 
                         {
                             programs.map((program, index) => {
@@ -100,7 +100,7 @@ export default function Programs() {
                                             </div>
                                             <div className="card-footer">
                                                 <Link href={`#`}>
-                                                    <Button size={`sm`} className={`shadow-md ${program.color.button}`}>
+                                                    <Button size={`sm`} className={`${program.color.button}`}>
                                                         See program</Button>
                                                 </Link>
                                             </div>

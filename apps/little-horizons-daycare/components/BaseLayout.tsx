@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './header';
 import Cta from './landing/Cta';
-import Footer from './Footer';
+import ResponsiveNavigationHeader from './ResponsiveNavigationHeader';
+import { ResponsiveFooter } from './ResponsiveFooter';
 
 export default function BaseLayout({
     children,
@@ -10,12 +10,14 @@ export default function BaseLayout({
 }>) {
     return (
         <div>
-            <Header />
+            <ResponsiveNavigationHeader />
+            {/* <Header /> */}
             <main>
                 {children}
             </main>
             <Cta />
-            <Footer />
+            <ResponsiveFooter />
+            {/* <Footer /> */}
         </div>
     )
 }

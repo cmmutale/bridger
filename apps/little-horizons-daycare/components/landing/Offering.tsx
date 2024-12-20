@@ -53,11 +53,11 @@ export default function Offering() {
                     </h2>
                 </div>
                 <div className="card-wrapper">
-                    <div 
-                    style={{
-                        '--column-min-width': '240px',
-                    }as React.CSSProperties}
-                    className="card-container u-grid auto-grid">
+                    <div
+                        style={{
+                            '--column-min-width': '240px',
+                        } as React.CSSProperties}
+                        className="card-container u-grid auto-grid gap-[var(--space-l)]">
                         {
                             offers.map((offer, index) => {
                                 return (
@@ -67,27 +67,27 @@ export default function Offering() {
                                                 src={`/images/${offer.coverImage}`}
                                                 className={`rounded-lg border-4 object-cover
                                                     ${offer.color.coverImage}`}
-                                                    fill
+                                                fill
                                                 alt=''
                                             />
                                         </div>
                                         <div className="card-content pt-4 space-y-2">
-                                        <div className="card-header w-[90%]">
-                                            <h3 className="card-title font-bold fs-0">
-                                                {offer.offer}
-                                            </h3>
-                                        </div>
-                                        <div className="card-body w-[90%]">
-                                            <p className='fs--1'>
-                                                {offer.description}
-                                            </p>
-                                        </div>
-                                        <div className="card-footer">
-                                            <Link href={`#`}>
-                                                <Button size={`sm`} className={`shadow-md ${offer.color.button}`}>
-                                                    See program</Button>
-                                            </Link>
-                                        </div>
+                                            <div className="card-header w-[90%]">
+                                                <h3 className="card-title font-bold fs-0">
+                                                    {offer.offer}
+                                                </h3>
+                                            </div>
+                                            <div className="card-body w-[90%]">
+                                                <p className='fs--1'>
+                                                    {offer.description}
+                                                </p>
+                                            </div>
+                                            <div className="card-footer">
+                                                <Link href={`#`}>
+                                                    <Button size={`sm`} className={`${offer.color.button}`}>
+                                                        See program</Button>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 )

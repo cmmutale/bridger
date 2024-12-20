@@ -7,6 +7,9 @@ import TeachersIntro from '@/components/landing/TeachersIntro'
 import VirtualTour from '@/components/landing/VirtualTour'
 import Testimonials from '@/components/landing/Testimonials'
 import FAQ from '@/components/landing/FAQ'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import ArrowUp from '@/components/icons/Arrow-Up'
 
 
 export default function page() {
@@ -20,6 +23,14 @@ export default function page() {
       <VirtualTour />
       <Testimonials />
       <FAQ />
+      <div className='fixed z-50 bottom-[var(--space-m)] right-[var(--space-m)]'>
+        <Link href={`#`} className=''>
+          <Button size={`icon`} className=''>
+            <ArrowUp className="fill-white stroke-white w-6 h-6" />
+          </Button>
+        </Link>
+      </div>
+
     </>
   )
 }
