@@ -9,6 +9,16 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
+		fontSize: {
+			xs: 'var(--fs--2)',
+			sm: 'var(--fs--1)',
+			base: 'var(--fs-0)',
+			lg: 'var(--fs-1)',
+			xl: 'var(--fs-2)',
+			'2xl': 'var(--fs-3)',
+			'3xl': 'var(--fs-4)',
+			'4xl': 'var(--fs-5)',
+		},
 		extend: {
 			fontFamily: {
 				body: "var(--font-body)",

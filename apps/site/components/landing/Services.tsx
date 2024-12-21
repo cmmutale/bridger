@@ -41,11 +41,11 @@ export default function Services() {
                         className="card-grid_content u-grid auto-grid gap-[var(--space-l)]">
                         {services.map((service, index) => {
                             return (
-                                <Card key={index} className='bg-[var(--branding-secondary)] text-[var(--branding-alt)] rounded-md'>
+                                <Card key={index} className=''>
                                     <CardHeader className='space-y-[var(--space-s)]'>
                                         {/* <span className='mx-auto'>{service.icon}</span> */}
                                         <CardTitle>{service.name}</CardTitle>
-                                        <Separator className='bg-[var(--branding-alt)] h-[4px]' />
+                                        <Separator className='bg-accent-foreground h-[4px]' />
                                     </CardHeader>
                                     <CardContent>
                                         <p>

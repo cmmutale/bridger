@@ -38,10 +38,10 @@ export default function ProblemStatement() {
                                 </ul>
                             </CardContent>
                         </Card>
-                        <Card className='scale-105 border-[4px] border-[var(--branding-alt)]'>
+                        <Card className='scale-105 border-card-foreground border-[4px]'>
                             <CardHeader className="space-y-[var(--space-s)]">
                                 <CardTitle>The New Way</CardTitle>
-                                <Separator className='bg-[var(--branding-alt)] h-[4px]' />
+                                <Separator className='bg-card-foreground h-[4px]' />
                             </CardHeader>
                             <CardContent>
                                 <ul>

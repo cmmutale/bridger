@@ -38,8 +38,7 @@ const navigation = [
 
 export default function Header() {
     return (
-        <header className="wrapper sticky top-0 z-50 bg-[var(--branding-secondary)] 
-        text-[var(--branding-alt)] shadow-2xl">
+        <header className="wrapper sticky top-0 z-50 bg-background">
             <div className="content container mx-auto flex items-center u-container h-20 justify-between">
                 <div className="logo">
                     <Logo />

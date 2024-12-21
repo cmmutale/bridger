@@ -43,8 +43,8 @@ export default function Showcase() {
         <section className="wrapper new-section">
             <div className="container_background"></div>
             <div className="container_content u-container u-grid auto-grid gap-[var(--space-m)] items-center">
-                <div className="textbox space-y-[var(--space-m)]">
-                    <h1 className='capitalize font-bold fs-3'>
+                <div className="textbox space-y-[var(--space-s)]">
+                    <h1 className='capitalize font-bold text-2xl'>
                         The Platforms We Use
                     </h1>
                     <p>
@@ -73,14 +73,14 @@ export default function Showcase() {
                     <div className='card-grid_content gap-[var(--space-m)] u-grid grid-cols-2'>
                         {
                             data[0].items.map((_, index) => (
-                                <div key={index} className="image relative h-52">
+                                <Card key={index} className="image relative h-52">
                                     <Image
                                         src={_.image}
                                         alt=''
                                         fill
                                         className='object-cover object-top'
                                     />
-                                </div>
+                                </Card>
                             ))
                         }
                     </div>

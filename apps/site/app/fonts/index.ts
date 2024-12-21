@@ -1,4 +1,4 @@
-import { Outfit, Praise, Prompt } from "next/font/google"
+import { Outfit, Praise, Prompt, Rubik } from "next/font/google"
 import localFont from "next/font/local";
 
 export const fontAlt = Praise({
@@ -13,7 +13,7 @@ export const fontBody = Prompt({
     variable: "--font-body"
 });
 
-export const fontHeading = Prompt({
+export const fontHeading = Rubik({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700", "800", "900"],
     variable: "--font-heading"
