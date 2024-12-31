@@ -7,21 +7,17 @@ import MeetingLink from '../ui/meeting-link'
 
 const process = [
     {
-        title: 'Questionaire',
-        description: 'Tell us about your business, your goals, and the kind of website you’re dreaming of',
+        title: 'Discovery Call',
+        description: 'Tell us about your business, your goals, and the kind of website you’re dreaming of.',
     },
     {
-        title: 'Design',
-        description: 'We will create a design that fits your needs and your budget',
+        title: 'Design & Pitch Decking',
+        description: 'We will create a design that fits your needs and your budget and present that to you in a pitch deck which you will own.',
     },
     {
-        title: 'Development',
-        description: 'We will develop your website with the latest technologies',
+        title: 'Building',
+        description: 'We will develop your website with the latest technologies that will help you carry out your mission.',
     },
-    {
-        title: 'Launch',
-        description: 'We will launch your website and make it available to the world',
-    }
 ]
 
 const projectGallery = [
@@ -40,45 +36,39 @@ const rotate = [
 
 export default function HowItWorks() {
     return (
-        <section className="wrapper new-section">
+        <section className="wrapper new-section section-h--medium" id='our-process'>
             <div className="container_background"></div>
-            <div className="container_content u-container u-grid auto-grid space-y-[var(--space-s)] place-items-center">
-                <div className="textbox space-y-[var(--space-s)]">
-                    <h2 className="font-bold fs-3">How It Works</h2>
+            <div className="container_content u-container u-container--narrow u-grid auto-grid space-y-[var(--space-s)] place-items-center">
+                <div className="textbox space-y-[var(--space-l)]">
+                    <h2 className="text-3xl font-medium font-[family-name:var(--font-heading)] text-center">
+                        Working With Us Couldn't Be Any Easier
+                    </h2>
                     <div className="card-grid">
-                        <div className="card-grid_content u-grid gap-[var(--space-s)]">
+                        <div className="card-grid_content u-grid auto-grid">
                             {
                                 process.map((item, index) => {
                                     return (
-                                        <Card key={index} className='border-[4px] border-[var(--branding-alt)] bg-[var(--branding-secondary)]'>
-                                            <CardHeader className='flex flex-row items-start gap-[var(--space-s)]'>
-                                                <div className="card-number">
-                                                    <span className='font-bold fs-3'>{'0'}{index + 1}</span>
-                                                </div>
-                                                <div className='space-y-[var(--space-xs)]'>
-                                                    <CardTitle className='block'>{item.title}</CardTitle>
-                                                    <CardDescription>
-                                                        {item.description}
-                                                    </CardDescription>
-
-                                                </div>
-                                            </CardHeader>
-                                        </Card>
+                                        <div key={index} className='flex gap-[var(--space-3xs)] flex-col text-center'>
+                                            <div>
+                                                <span className='font-[family-name:var(--font-alt)] 
+                                                    font-black text-xl'>{index + 1}</span>
+                                            </div>
+                                            <div className=''>
+                                                <CardTitle className='block text-lg font-normal'>{item.title}</CardTitle>
+                                                <CardDescription>
+                                                    {item.description}
+                                                </CardDescription>
+                                            </div>
+                                        </div>
                                     )
                                 })
                             }
                         </div>
                     </div>
-                    <div className="cta">
-                        <MeetingLink>
-                        <Button className='w-full sm:w-auto'>Get Started Today</Button>
-                        </MeetingLink>
-                    </div>
                 </div>
-
-                <div className="gallery">
+                {/* <div className="gallery">
                     <div className="galler_content">
-                        <div className="gallery-grid u-grid -space-y-[var(--space-3xl)]">
+                        <div className="gallery-grid u-grid -space-y-[100%]">
                             {
                                 projectGallery.map((item, index) => {
                                     return (
@@ -91,7 +81,7 @@ export default function HowItWorks() {
                             }
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

@@ -20,35 +20,31 @@ const navigation = [
     },
     {
         label: `Services`,
-        href: `/services`
-    },
-    {
-        label: `Templates`,
-        href: `/templates`
+        href: `/#services`
     },
     {
         label: `Pricing`,
         href: `/#pricing`
     },
     {
-        label: `About`,
-        href: `/about`
+        label: `Our Process`,
+        href: `/#our-process`
     },
 ]
 
 export default function Header() {
     return (
-        <header className="wrapper sticky top-0 z-50 bg-background">
-            <div className="content container mx-auto flex items-center u-container h-20 justify-between">
+        <header className="wrapper absolute left-0 w-full top-0 z-50 bg-transparent">
+            <div className="content u-container mx-auto flex items-center u-container h-20 justify-between">
                 <div className="logo">
                     <Logo />
                 </div>
                 <div className="nav items-center gap-[var(--space-l)] flex-1 justify-end sm:flex hidden">
-                    <nav className="flex gap-[var(--space-m)] ml-auto">
+                    <nav className="flex gap-[var(--space-3xs)] ml-auto">
                         {
                             navigation.map((item, index) => (
                                 <Link key={index} href={item.href}>
-                                    {item.label}
+                                    <Button variant={`ghost`} size={`default`}>{item.label}</Button>
                                 </Link>
                             ))
                         }
@@ -63,7 +59,7 @@ export default function Header() {
                 </div>
                 <Sheet>
                     <SheetTrigger className="sm:hidden">
-                        <Button asChild variant={`ghost`} size={`icon`} className='border-[var(--branding-alt)]'>
+                        <Button asChild variant={`ghost`} size={`icon`}>
                             <div className="vector-icon relative">
                                 <span className="block h-[3px] bg-black w-[24px] absolute translate-y-[200%]"></span>
                                 <span className="block h-[3px] bg-black w-[24px] absolute"></span>
@@ -71,7 +67,7 @@ export default function Header() {
                             </div>
                         </Button>
                     </SheetTrigger>
-                    <SheetContent side={`top`} className='space-y-[var(--space-m)] border-b-[4px] border-[var(--branding-alt)]'>
+                    <SheetContent side={`top`} className='space-y-[var(--space-m)] border-2 border-secondary-foreground'>
                         <SheetClose className='ml-auto block'>
                             <Button asChild variant={`ghost`} size={`icon`} className='border-[var(--branding-alt)]'>
                                 <div className="vector-icon relative">
@@ -83,20 +79,20 @@ export default function Header() {
                         <SheetHeader className='sr-only'>
                             <SheetTitle className='sr-only'>Mobile menu</SheetTitle>
                         </SheetHeader>
-                        <nav className="flex flex-col gap-[var(--space-m)] ml-auto text-right">
+                        <nav className="flex flex-col ml-auto text-center">
                             {
                                 navigation.map((item, index) => (
-                                    <Link key={index} href={item.href}>
-                                    <SheetClose>
+                                    <Link key={index} href={item.href} className='border-b-2 border-border py-[var(--space-s)]'>
+                                        <SheetClose>
                                             {item.label}
-                                    </SheetClose>
-                                        </Link>
+                                        </SheetClose>
+                                    </Link>
                                 ))
                             }
                         </nav>
-                        <div className="cta flex justify-end">
+                        <div className="cta flex justify-center">
                             <MeetingLink>
-                                <Button size={`lg`}>
+                                <Button>
                                     Buy A Website
                                 </Button>
                             </MeetingLink>

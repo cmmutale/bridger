@@ -6,10 +6,6 @@ import MeetingLink from './ui/meeting-link'
 
 const navigation = [
     {
-        label: `Home`,
-        href: `/`
-    },
-    {
         label: `About`,
         href: `/about`
     },
@@ -29,22 +25,28 @@ const navigation = [
 
 export default function Footer() {
     return (
-        <footer className="wrapper min-h-[400px] grid place-items-stretch new-section bg-[var(--branding-alt)] text-[var(--branding-secondary)]">
+        <footer className="wrapper section-h--short bg-white">
             <div className="container_bg"></div>
-            <div className="container_content u-container u-grid place-items-center">
+            <div className="container_content u-container u-container--narrow space-y-[var(--space-m)] flex items-center flex-col">
                 <Logo />
-                <div className="nav-list">
-                    <div className="nav-list_header"></div>
-                    <ul>
-                        <li>
-                            <Link href={`mailto:admin@nodedropp.com`}>
-                                <Button variant={`link`}>email: admin@nodedropp.com</Button>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
+                <nav className='flex gap-[var(--space-3xs)]'>
+                    {
+                        navigation.map((link, index) => {
+                            return (
+                                <Link key={index} href={link.href}>
+                                    <Button variant={`link`} size={`sm`} className='text-secondary-foreground'>
+                                        {link.label}
+                                    </Button>
+                                </Link>
+
+                            )
+                        })
+                    }
+                </nav>
+                <p className='text-sm font-semibold'>
+                    © 2024 The Nodedrop Team. All rights reserved.
+                </p>
             </div>
-            <p className='font--1 block mt-auto text-center mx-auto'> © 2024 The Nodedrop Team. All rights reserved.</p>
         </footer>
     )
 }

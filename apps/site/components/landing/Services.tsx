@@ -1,65 +1,65 @@
 import React from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { LucidePaintbrush, LucideSettings, LucideMonitor } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import MeetingLink from '@/components/ui/meeting-link'
-import { Separator } from '@/components/ui/separator'
-import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
     {
-        name: 'Development & Design',
-        description: 'Your website should do more than look good — it should work beautifully. We build fast, secure, and responsive websites from the ground up on the platform of your choice, whether it’s WordPress, Webflow, Squarespace, or something else entirely.',
-        icon: <LucideMonitor className='size-12' />,
+        name: 'Website Design',
+        description: 'Tailored designs that reflect your brand identity and solve specific business challenges',
+        // icon: <LucideMonitor className='size-12' />,
     },
     {
-        name: 'Branding & Marketing',
-        description: 'We help you find your voice and style to make your online presence unforgettable. From crafting the perfect tagline to designing eye-catching visuals, we ensure your audience hears and sees you across every channel — inboxes to social feeds.',
-        icon: <LucidePaintbrush className='size-12' />,
+        name: 'Website Development',
+        description: 'Ready-to-use templates designed for a variety of industries, including daycare and bakery businesses.',
+        // icon: <LucidePaintbrush className='size-12' />,
     },
     {
-        name: 'Maintenance & hosting',
-        description: `No time to keep your site updated? We’ve got it handled. From hosting and updates to monitoring and security, we make sure your website stays online, secure, and running smoothly.`,
-        icon: <LucideSettings className='size-12' />,
+        name: 'Branding & Pitch Decking',
+        description: `Modernize outdated websites for improved aesthetics, functionality, and performance`,
+        // icon: <LucideSettings className='size-12' />,
     },
+    {
+        name: 'Maintenance & Hosting',
+        description: `Enhance search engine visibility with keyword-driven content and best practices`,
+        // icon: <LucideSettings className='size-12' />,
+    },
+]
+
+const projectGallery = [
+    "/media/images/demo-expert_hiring.png",
+    "/media/images/demo-template-hawks.png",
+    "/media/images/demo-template-krypto.png",
+    "/media/images/demo-template-onthegoglow.png",
+]
+
+const rotate = [
+    'rotate-12',
+    '-rotate-6',
+    'rotate-12',
+    '-rotate-6',
 ]
 
 export default function Services() {
     return (
-        <section className="wrapper new-section bg-[var(--branding-primary)] text-[var(--branding-secondary)]">
-            <div className="content_background"></div>
-            <div className="cotnainer_content u-container space-y-[var(--space-m)]">
-                <div className="textbox">
-                    <h2 className='font-[family-name:var(--font-heading)] 
-                    font-bold fs-3 text-center'>What We Do Best</h2>
-                </div>
-                <div className="card-grid">
-                    <div
-                        style={{
-                            '--column-min-w': '240px',
-                        } as React.CSSProperties}
-                        className="card-grid_content u-grid auto-grid gap-[var(--space-l)]">
-                        {services.map((service, index) => {
-                            return (
-                                <Card key={index} className=''>
-                                    <CardHeader className='space-y-[var(--space-s)]'>
-                                        {/* <span className='mx-auto'>{service.icon}</span> */}
-                                        <CardTitle>{service.name}</CardTitle>
-                                        <Separator className='bg-accent-foreground h-[4px]' />
-                                    </CardHeader>
-                                    <CardContent>
+        <section className="wrapper new-section section-h--medium" id='services'>
+            <div className="u-container-background"></div>
+            <div className="container u-container u-grid auto-grid">
+                <div className="textbox space-y-[var(--space-m)]">
+                    <h2 className='font-[family-name:var(--font-heading)] text-3xl text-center font-medium capitalize'>
+                        Comprehensive solutions to meet your website needs.
+                    </h2>
+                    <div className="card-grid u-grid auto-grid">
+                        {
+                            services.map((item, index) => {
+                                return (
+                                    <div key={index} className="space-y-[var(--space-3xs)] py-[var(--space-l)] px-[var(--space-xs)]">
+                                        <h3 className='font-[family-name:var(--font-heading)] text-xl font-medium'>{item.name}</h3>
                                         <p>
-                                            {service.description}
+                                            {item.description}
                                         </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <Link href={`/services`} className='block w-full'>
-                                        <Button className='w-full'>Learn More</Button>
-                                        </Link>
-                                    </CardFooter>
-                                </Card>
-                            )
-                        })}
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ interface LogoProps {
     height?: number;
 }
 
-export default function Logo({ width = 150, link, height = 150 }: LogoProps) {
+export default function Logo({ width = 200, link, height = 150 }: LogoProps) {
     return (
         <Link className='block' href={link ? "/" : "/"}>
             <Image

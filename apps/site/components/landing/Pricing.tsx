@@ -1,15 +1,16 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { LucideCheckCircle, LucideCheck, PanelRightInactive } from 'lucide-react'
+import { LucideCircle } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MeetingLink from '../ui/meeting-link'
+import { Badge } from '../ui/badge'
 
 const tiers = [
     {
-        name: 'Ready-to-go',
-        description: "Perfect for clients with existing websites that need updates or enhancements.",
+        name: 'Jump Start',
+        description: "Perfect for clients who want to grab off the shelf and go.",
         price: 199,
         features: [
             'Access to ready-made design templates',
@@ -44,53 +45,55 @@ const tiers = [
 
 export default function Pricing() {
     return (
-        <section className="wrapper new-section" id='pricing'>
+        <section className="wrapper new-section section-h--medium" id='pricing'>
             <div className="container_background"></div>
-            <div className="container_content u-container space-y-[var(--space-m)] u-container--narrow">
-                <div className="textbox">
-                    <h2 className='font-bold fs-3 font-[family-name:var(--font-heading)]'>Pricing</h2>
+            <div className="container_content u-container space-y-[var(--space-m)]">
+                <div className="textbox max-w-3xl mx-auto space-y-[var(--space-m)]">
+                    <h2 className='text-3xl font-[family-name:var(--font-heading)] text-center font-medium'>
+                        Affordable, Flexible Solutions to Fit Your Needs
+                    </h2>
+                    <p className='text-center mx-auto'>
+                        Whether you need a ready-to-use template or a custom website, we’ve got you covered.
+                    </p>
                 </div>
                 <div className="card-grid">
-                    <div className="card-grid_content u-grid auto-grid place-content-center">
+                    <div className="card-grid_content u-grid auto-grid max-w-3xl mx-auto">
                         {
                             tiers.map((tier, index) => {
                                 return (
-                                    <Card key={index} 
-                                    className={`border-[4px] border-[var(--branding-alt)] 
-                                    ${tier.featured ? "bg-[var(--branding-primary)] text-[var(--branding-secondary)]" :
-                                            "bg-[var(--branding-secondary)]"}`}>
-                                        <CardHeader className='space-y-[var(--space-s)]'>
-                                            <p className="font-bold fs-1">{tier.name}</p>
-                                            <CardDescription className={`${tier.featured ? "text-[var(--branding-alt)]" : ""}`}>
-                                                {tier.description}
-                                            </CardDescription>
-                                            <CardTitle>
-                                                <span className='fs--1 font-normal'>starting from </span>
-                                                {"$"}{tier.price} <span className='fs--1 font-normal'>usd</span>
-                                            </CardTitle>
-                                            <Separator className='bg-[var(--branding-alt)] h-[4px]' />
-                                        </CardHeader>
-                                        <CardContent>
-                                            <ul>
+                                    <div key={index} className='relative'>
+                                        <Card className='grow-0 basis-1/3 border-2 border-secondary-foreground'>
+                                            <CardHeader className='space-y-[var(--space-s)]'>
+                                                <p className='text-primary font-[family-name:var(--font-alt)]'>{tier.name}</p>
+                                                <CardDescription>
+                                                    {tier.description}
+                                                </CardDescription>
+                                                <CardTitle>
+                                                    <span className='text-4xl font-normal font-[family-name:var(--font-alt)]'>{"$"}{tier.price} </span>
+                                                </CardTitle>
+                                                <MeetingLink>
+                                                    <Button className='w-full'>Free 15 min Consultation</Button>
+                                                </MeetingLink>
+
+                                            </CardHeader>
+                                        </Card>
+                                        <div className='space-y-[var(--space-2xs)] pt-[var(--space-2xs)] px-[var(--space-s)]'>
+                                            <p className='font-bold text-sm italic'>comes with</p>
+                                            <ul className='space-y-[var(--space-3xs)]'>
                                                 {
                                                     tier.features.map((feature, index) => {
                                                         return (
-                                                            <li key={index} className='flex gap-[var(--space-3xs)]'>
-                                                                <span className='block shrink-0 font-bold'>-</span>
+                                                            <li key={index} className=''>
+                                                                {/* <LucideCircle className='block shrink-0 size-2' /> */}
                                                                 <span className='block'>{feature}</span>
                                                             </li>
                                                         )
                                                     })
                                                 }
                                             </ul>
-                                        </CardContent>
-                                        <CardFooter>
-                                            <MeetingLink>
-                                                <Button className='w-full' 
-                                                variant={tier.featured ? "secondary" : "default"}>Get Started</Button>
-                                            </MeetingLink>
-                                        </CardFooter>
-                                    </Card>
+                                        </div>
+
+                                    </div>
                                 )
                             })
                         }

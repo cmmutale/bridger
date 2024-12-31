@@ -25,13 +25,10 @@ export default function RootLayout({
         ${fontHeading.variable} antialiased`}>
         <div>
           <Header />
-          <main>
-            {children}
-            <Cta />
-          </main>
+          {children}
+          <Cta />
           <Footer />
         </div>
-
       </body>
     </html>
   );

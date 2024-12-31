@@ -18,6 +18,8 @@ const config: Config = {
 			'2xl': 'var(--fs-3)',
 			'3xl': 'var(--fs-4)',
 			'4xl': 'var(--fs-5)',
+			'5xl': 'var(--fs-6)',
+			'6xl': 'var(--fs-7)',
 		},
 		extend: {
 			fontFamily: {

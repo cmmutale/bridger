@@ -1,23 +1,23 @@
-import { Outfit, Praise, Prompt, Rubik } from "next/font/google"
+import { Montserrat, Open_Sans, DM_Mono } from "next/font/google"
 import localFont from "next/font/local";
 
-export const fontAlt = Praise({
-    subsets: ["latin"],
-    weight: "400",
-    variable: "--font-alt"
-});
-
-export const fontBody = Prompt({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800", "900"],
-    variable: "--font-body"
-});
-
-export const fontHeading = Rubik({
+export const fontHeading = Montserrat({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700", "800", "900"],
     variable: "--font-heading"
 });
+
+export const fontBody = Open_Sans({
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
+    variable: "--font-body"
+});
+
+export const fontAlt = DM_Mono({
+    subsets: ["latin"],
+    weight: ["400", "500"],
+    variable: "--font-alt"
+})
 
 
 export const fontTest = localFont({

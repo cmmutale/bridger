@@ -1,8 +1,8 @@
-/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1500,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,m,2xl,12 */
+/* @link https://utopia.fyi/grid/calculator?c=320,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=2xs,l,xl,12 */
 
 :root {
-    --grid-max-width: 77.50rem;
-    --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem));
+    --grid-max-width: 69.75rem;
+    --grid-gutter: var(--space-2xs-l, clamp(0.5rem, -0.2035rem + 3.5176vw, 2.25rem));
     --grid-columns: 12;
 }
 
@@ -11,6 +11,12 @@
     padding-inline: var(--grid-gutter);
     margin-inline: auto;
     width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .u-container {
+        padding-inline: calc(var(--grid-gutter)*2);
+    }
 }
 
 .u-container--narrow {
@@ -22,9 +28,19 @@
     gap: var(--grid-gutter);
 }
 
-.new-section > .u-container {
-    padding-block: var(--space-2xl);
+.section-h--short {
+    padding-block: var(--space-m-l);
 }
+
+.section-h--medium {
+    padding-block: var(--space-l-xl);
+}
+
+.section-h--tall {
+    min-height: 100vh;
+    min-height: 100vsh;
+}
+
 
 .auto-grid {
     --_column-min-w: var(--column-min-w, 300px);

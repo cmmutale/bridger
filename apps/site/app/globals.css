@@ -7,16 +7,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+html, body{
   font-size: 16px;
 }
 
-@media screen and (min-width: 1024px) {
-  html,
-  body {
-    font-size: 20px;
+@media screen and (min-width: 768px) {
+  html, body {
+    font-size: 18px;
   }
+}
+
+body {
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
 }
 
 @layer base {
@@ -25,7 +27,7 @@ body {
   }
 
   body {
-    @apply font-body text-foreground bg-background;
+    @apply font-body text-foreground;
   }
 
   p,
@@ -43,4 +45,3 @@ body {
     @apply max-w-[65ch];
   }
 }
-

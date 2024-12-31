@@ -16,6 +16,7 @@ export default function ProblemStatement() {
                         <Card className='scale-90'>
                             <CardHeader className="space-y-[var(--space-s)]">
                                 <CardTitle>The Old Way</CardTitle>
+                                {/* if you don't work with us */}
                                 <Separator className='bg-[var(--branding-alt)] h-[4px]' />
                             </CardHeader>
                             <CardContent>
