@@ -1,0 +1,154 @@
+---
+import "@fontsource/dm-serif-display";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Build web portals faster and easier</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "DM Serif Display", serif;
+    line-height: 1.5em;
+    font-size: 18px;
+  }
+
+  .block {
+    margin-bottom: 1.5em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1em;
+    text-wrap: balance;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-size: clamp(36px, 4vw, 48px);
+  }
+
+  h2 {
+    font-size: clamp(32px, 3vw, 40px);
+  }
+
+  h3 {
+    font-size: clamp(28px, 3vw, 36px);
+  }
+
+  h4, .h4 {
+    font-size: clamp(24px, 2vw, 28px);
+  }
+
+
+
+  p,
+  ul {
+    margin-bottom: 1.25em;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  li {
+    list-style: none;
+    line-height: 1em;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .btn {
+    height: 44px;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .btn--primary {
+    background-color: rgb(4, 4, 4);
+    color: white;
+    border-radius: 8px;
+  }
+
+  .btn--primary:hover {
+    background-color: rgba(4, 4, 4, 0.9);
+  }
+
+  .content {
+    --gap: clamp(1rem, 6vw, 3rem);
+    --full: minmax(var(--gap), 1fr);
+    --content: min(60ch, 100% - var(--gap) * 2);
+    --popout: minmax(0, 2rem);
+    --feature: minmax(0, 5rem);
+
+    display: grid;
+    grid-template-columns:
+      [full-start] var(--full)
+      [feature-start] var(--feature)
+      [popout-start] var(--popout)
+      [content-start] var(--content) [content-end]
+      var(--popout) [popout-end]
+      var(--feature) [feature-end]
+      var(--full) [full-end];
+  }
+
+  .page-wrapper {
+    padding-block: 2rem;
+  }
+
+  @media screen and (min-width: 640px) {
+    .page-wrapper {
+      padding-block: 6rem;
+    }
+  }
+
+  .content > * {
+    grid-column: content;
+  }
+
+  .full > * {
+    grid-column: full;
+  }
+</style>
