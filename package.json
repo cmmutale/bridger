@@ -1,5 +1,5 @@
 {
-  "name": "ndrop",
+  "name": "bridger",
   "private": true,
   "scripts": {
     "build": "turbo build",
