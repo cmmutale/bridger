@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Developing a no-code web portal builder tailored for corporate environments requires a strategic selection of drag-and-drop components that address the core functionalities of corporate portals. Based on industry insights and best practices, here are essential components to prioritize for your Minimum Viable Product (MVP):
 
-## Getting Started
+1. **Text Block**  
+   Facilitates the addition of headings, paragraphs, and lists, allowing users to input and format textual content effortlessly.
 
-First, run the development server:
+2. **Image and Video Embed**  
+   Enables users to incorporate visual media, enhancing engagement and providing dynamic content capabilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. **Form Builder**  
+   Allows for the creation of customizable forms to collect user information, feedback, or registrations, which is vital for data collection and management.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Document Library**  
+   Provides a centralized area for uploading, organizing, and accessing documents, supporting efficient document management.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. **Calendar Integration**  
+   Displays events, deadlines, and schedules, aiding in event management and organizational planning.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+6. **News and Announcements**  
+   Facilitates the sharing of company updates, news, and important announcements, fostering internal communication.
 
-## Learn More
+7. **Employee Directory**  
+   Lists staff members with profiles, contact information, and roles, promoting connectivity and collaboration within the organization.
 
-To learn more about Next.js, take a look at the following resources:
+8. **Navigation Menu**  
+   Allows users to create and customize site navigation, ensuring intuitive access to various sections and enhancing user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+9. **Dashboard Widgets**  
+   Offers customizable widgets to display key performance indicators (KPIs), analytics, or personalized content, supporting data visualization and informed decision-making.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+10. **Collaboration Tools**  
+    Integrates features like discussion boards or chat modules to facilitate team collaboration and communication.
 
-## Deploy on Vercel
+11. **Access Control Settings**  
+    Provides options to set permissions and access levels for different users or groups, ensuring security and appropriate data access.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+12. **Search Functionality**  
+    Enables users to search for content, documents, or profiles within the portal, improving information retrieval efficiency.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Incorporating these components into your page builder will empower non-technical users to create comprehensive and functional corporate web portals that centralize data flow, enhance communication, and streamline business processes. 
