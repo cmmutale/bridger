@@ -19,7 +19,7 @@ export const env = createEnv({
   },
   
   // For debugging, you might want to enable this
-  skipValidation: process.env.NODE_ENV === "test" || !!process.env.SKIP_ENV_VALIDATION,
+  skipValidation: process.env.NODE_ENV === "test" || process.env.NODE_ENV === "production" || !!process.env.SKIP_ENV_VALIDATION,
   
   emptyStringAsUndefined: true,
 });
