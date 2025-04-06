@@ -13,8 +13,8 @@ import { projects, pages } from '~/server/db/schema';
 import { db } from '~/server/db';
 import { eq } from 'drizzle-orm';
 
-export default async function Page({ params }: { params: { id: string } }) {
-    const { id } = params;
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
 
     const [project] = await db.select().from(projects).where(eq(projects.id, id));
     const pagesList = await db.select().from(pages).where(eq(pages.projectId, id));
