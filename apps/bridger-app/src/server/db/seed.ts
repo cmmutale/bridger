@@ -13,7 +13,7 @@ async function main() {
     await db.insert(posts).values(post);
 
     const project: typeof projects.$inferInsert = {
-        userId: process.env.USER_SEED_ID as string,
+        userId: process.env.USER_SEED_ID!,
         name: "Project Alpha",
         description: "This is portal was built with Bridger.",
     }
@@ -39,6 +39,6 @@ async function main() {
 main().catch((err) => {
     console.error("seeding failed: ", err);
     process.exit(1);
-}).finally(() => {
+}).then(() => { }).finally(() => {
     client.end(); // close db client connection
 });
