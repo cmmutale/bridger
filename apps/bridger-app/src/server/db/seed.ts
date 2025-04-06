@@ -16,7 +16,7 @@ async function main() {
         userId: process.env.USER_SEED_ID!,
         name: "Project Alpha",
         description: "This is portal was built with Bridger.",
-    }
+    };
     await db.insert(projects).values(project);
 
     // retrieve id of project with name = 'Project Alpha'
@@ -29,16 +29,20 @@ async function main() {
         isRootpage: true,
         description: "This is the opening page of this portal.",
         content: {}
-    }
+    };
     await db.insert(pages).values(page);
-
 
     console.log("database seeded!!!");
 }
 
-main().catch((err) => {
-    console.error("seeding failed: ", err);
-    process.exit(1);
-}).then(() => { }).finally(() => {
-    client.end(); // close db client connection
-});
+// Properly handle the promise chain
+void (async () => {
+    try {
+        await main();
+    } catch (err) {
+        console.error("seeding failed: ", err);
+        process.exit(1);
+    } finally {
+        await client.end(); // close db client connection
+    }
+})();
